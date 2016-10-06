@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
+		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
 		E7A30F040446AA9000000000 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E293871749800000000 /* Security.framework */; };
 		E7A30F0404E8BE0700000000 /* AEPStudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29E6EC5BAF00000000 /* AEPStudentsTable.swift */; };
 		E7A30F040D87AFF900000000 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E2942016B5300000000 /* GoogleUtilities.framework */; };
@@ -149,6 +151,8 @@
 		1DD70E29F7C3679F00000000 /* NoSQLDatabase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = NoSQLDatabase.storyboard; path = MySampleApp/Demo/NoSQL/NoSQLDatabase.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29FBBEC07A00000000 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = MySampleApp/App/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29FE47861100000000 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OsuHondaAEPLogo 2.png"; path = "mysampleapp/app/supportingfiles/OsuHondaAEPLogo 2.png"; sourceTree = SOURCE_ROOT; };
+		483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OsuHondaAEPLogo.png; path = mysampleapp/app/supportingfiles/OsuHondaAEPLogo.png; sourceTree = SOURCE_ROOT; };
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -409,6 +413,8 @@
 			isa = PBXGroup;
 			children = (
 				1DD70E296CFBF1A800000000 /* Info.plist */,
+				483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */,
+				483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */,
 			);
 			name = SupportingFiles;
 			path = mysampleapp/app/supportingfiles;
@@ -486,9 +492,11 @@
 				E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */,
 				E7A30F04D4A0F94600000000 /* UserDataStorage.storyboard in Resources */,
 				E7A30F0411A9718900000000 /* Launch Screen.storyboard in Resources */,
+				483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */,
 				E7A30F0497DCFE6400000000 /* Images.xcassets in Resources */,
 				E7A30F0461E16E7200000000 /* UserFiles.storyboard in Resources */,
 				E7A30F0486D5954B00000000 /* GoogleSignIn.bundle in Resources */,
+				483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */,
 				E7A30F04EF91249200000000 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
