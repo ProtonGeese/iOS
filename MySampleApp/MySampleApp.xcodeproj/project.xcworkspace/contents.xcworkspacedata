@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/KS/Downloads/AEP-iOS-aws-my-sample-app-ios-swift/MySampleApp/MySampleApp.xcodeproj">
+      location = "self:MySampleApp.xcodeproj">
    </FileRef>
 </Workspace>

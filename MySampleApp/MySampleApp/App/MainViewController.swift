@@ -33,6 +33,7 @@ class MainViewController: UITableViewController {
             self.updateTheme()
         }
 
+            presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
             name: NSLocalizedString("User Sign-in",
@@ -117,10 +118,14 @@ class MainViewController: UITableViewController {
                 navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
                 navigationItem.rightBarButtonItem!.action = "handleLogout"
             }
-            if !(AWSIdentityManager.defaultIdentityManager().loggedIn) {
-                navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-In", comment: "Label for the login button.")
-                navigationItem.rightBarButtonItem!.action = "goToLogin"
-            }
+    }
+    
+    func presentSignInViewController() {
+        if !AWSIdentityManager.defaultIdentityManager().loggedIn {
+            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+            let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignIn") as! SignInViewController
+            presentViewController(signInViewController, animated: true, completion: nil)
+        }
     }
     
     // MARK: - UITableViewController delegates
@@ -163,12 +168,6 @@ class MainViewController: UITableViewController {
         }
     }
     
-    func goToLogin() {
-             print("Handling optional sign-in.")
-            let loginStoryboard = UIStoryboard(name: "SignIn", bundle: nil)
-            let loginController = loginStoryboard.instantiateViewControllerWithIdentifier("SignIn")
-            navigationController!.pushViewController(loginController, animated: true)
-    }
     
     func handleLogout() {
         if (AWSIdentityManager.defaultIdentityManager().loggedIn) {
@@ -176,6 +175,7 @@ class MainViewController: UITableViewController {
             AWSIdentityManager.defaultIdentityManager().logoutWithCompletionHandler({(result: AnyObject?, error: NSError?) -> Void in
                 self.navigationController!.popToRootViewControllerAnimated(false)
                 self.setupRightBarButtonItem()
+                    self.presentSignInViewController()
             })
             // print("Logout Successful: \(signInProvider.getDisplayName)");
         } else {
