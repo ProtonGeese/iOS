@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0909B5AB1DAC3689001183D9 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909B5AA1DAC3689001183D9 /* Welcome.storyboard */; };
+		0909B5AD1DAC3737001183D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */; };
 		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
 		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
 		E7A30F040446AA9000000000 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E293871749800000000 /* Security.framework */; };
@@ -92,6 +94,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0909B5AA1DAC3689001183D9 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = MySampleApp/Demo/Welcome/Welcome.storyboard; sourceTree = SOURCE_ROOT; };
+		0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = MySampleApp/Demo/Welcome/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E290348E26300000000 /* ContentDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentDeliveryViewController.swift; path = MySampleApp/Demo/ContentDelivery/ContentDeliveryViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29049DAC6500000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MySampleApp/App/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E2911AB9F2800000000 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSettingsViewController.swift; path = MySampleApp/Demo/UserSettings/UserSettingsViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -191,6 +195,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0909B5A71DAC357C001183D9 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0909B5AA1DAC3689001183D9 /* Welcome.storyboard */,
+				0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
 		B401C97902F51D2700000000 /* AmazonAws */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +245,7 @@
 		B401C9795BDD89CB00000000 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0909B5A71DAC357C001183D9 /* Welcome */,
 				B401C979E7BF05DB00000000 /* AppAnalytics */,
 				B401C97962ABC3FB00000000 /* ContentDelivery */,
 				1DD70E291CBAA7C300000000 /* DemoFeature.swift */,
@@ -489,6 +503,7 @@
 				E7A30F0492800CC600000000 /* UserSettings.storyboard in Resources */,
 				E7A30F04751DAC2F00000000 /* UserIdentity.storyboard in Resources */,
 				E7A30F04B4D5D7AB00000000 /* NoSQLDatabase.storyboard in Resources */,
+				0909B5AB1DAC3689001183D9 /* Welcome.storyboard in Resources */,
 				E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */,
 				E7A30F04D4A0F94600000000 /* UserDataStorage.storyboard in Resources */,
 				E7A30F0411A9718900000000 /* Launch Screen.storyboard in Resources */,
@@ -550,6 +565,7 @@
 				E7A30F04CE80434C00000000 /* UtilityFunctions.swift in Sources */,
 				E7A30F04EF0DE5EB00000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F0460E7BFE800000000 /* MainViewController.swift in Sources */,
+				0909B5AD1DAC3737001183D9 /* WelcomeViewController.swift in Sources */,
 				E7A30F0434B6C57800000000 /* AppAnalyticsViewController.swift in Sources */,
 				E7A30F0475292BE500000000 /* NoSQLQueryResultViewController.swift in Sources */,
 				E7A30F04EC708F4700000000 /* SignInViewController.swift in Sources */,

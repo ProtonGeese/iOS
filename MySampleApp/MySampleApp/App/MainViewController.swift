@@ -79,6 +79,16 @@ class MainViewController: UITableViewController {
             icon: "NoSQLIcon", storyboard: "NoSQLDatabase")
         
         demoFeatures.append(demoFeature)
+        
+        demoFeature = DemoFeature.init(
+            name: NSLocalizedString("Welcome",
+                comment: "Label for demo menu option."),
+            detail: NSLocalizedString("Go to the welcome page",
+                comment: "Description for demo menu option."),
+            icon: "UserIcon", storyboard: "Welcome")
+        
+        
+        demoFeatures.append(demoFeature)
 
                 signInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.defaultIdentityManager(), queue: NSOperationQueue.mainQueue(), usingBlock: {[weak self] (note: NSNotification) -> Void in
                         guard let strongSelf = self else { return }
