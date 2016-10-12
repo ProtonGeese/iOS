@@ -14,7 +14,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6B443C481B5DB06200406B17"
+               BlueprintIdentifier = "AC3CCA84F604FEA5402AC730DE7904FA"
+               BuildableName = "Pods_MySampleApp.framework"
+               BlueprintName = "Pods-MySampleApp"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E66DC04E0000000000000000"
                BuildableName = "MySampleApp.app"
                BlueprintName = "MySampleApp"
                ReferencedContainer = "container:MySampleApp.xcodeproj">
@@ -32,7 +46,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B443C481B5DB06200406B17"
+            BlueprintIdentifier = "E66DC04E0000000000000000"
             BuildableName = "MySampleApp.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">
@@ -55,7 +69,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B443C481B5DB06200406B17"
+            BlueprintIdentifier = "E66DC04E0000000000000000"
             BuildableName = "MySampleApp.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">
@@ -74,7 +88,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6B443C481B5DB06200406B17"
+            BlueprintIdentifier = "E66DC04E0000000000000000"
             BuildableName = "MySampleApp.app"
             BlueprintName = "MySampleApp"
             ReferencedContainer = "container:MySampleApp.xcodeproj">

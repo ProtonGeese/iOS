@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1BE6D0A9688D6386ACAE0827E6E5F30EA3DF61BD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1BE6D0A9688D6386ACAE0827E6E5F30EA3DF61BD" : 9223372036854775807,
+    "1D2CEF58854755AB3C5C33F774FC77075371F897" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "77B9C1FB-B054-4263-9E2D-0385B71F50E4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1BE6D0A9688D6386ACAE0827E6E5F30EA3DF61BD" : "AEP-iOS\/",
+    "1D2CEF58854755AB3C5C33F774FC77075371F897" : "CameraRecord\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MySampleApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MySampleApp\/MySampleApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Capstone-OSU-AAP\/AEP-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1BE6D0A9688D6386ACAE0827E6E5F30EA3DF61BD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HaLamUs\/CameraRecord.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1D2CEF58854755AB3C5C33F774FC77075371F897"
+    }
+  ]
+}
