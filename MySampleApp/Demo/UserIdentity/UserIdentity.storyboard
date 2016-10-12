@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Identity-->
+        <!--User Profile-->
         <scene sceneID="N3v-4H-Oy9">
             <objects>
-                <viewController storyboardIdentifier="UserIdentity" title="User Identity" id="hif-eS-niX" customClass="UserIdentityViewController" customModule="MySampleApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserIdentity" title="User Profile" id="hif-eS-niX" customClass="UserIdentityViewController" customModule="MySampleApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="db7-Pg-fLO"/>
                         <viewControllerLayoutGuide type="bottom" id="KfG-cT-FDa"/>

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--App Content Delivery-->
+        <!--Lesson List-->
         <scene sceneID="toh-qV-xas">
             <objects>
-                <tableViewController storyboardIdentifier="ContentDelivery" title="App Content Delivery" id="VLa-cD-v27" customClass="ContentDeliveryViewController" customModule="MySampleApp" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContentDelivery" title="Lesson List" id="VLa-cD-v27" customClass="ContentDeliveryViewController" customModule="MySampleApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="j3k-wf-tss">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
