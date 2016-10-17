@@ -15,7 +15,7 @@ import Foundation
 import UIKit
 import AWSMobileHubHelper
 
-class UserIdentityViewController: UIViewController {
+class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!

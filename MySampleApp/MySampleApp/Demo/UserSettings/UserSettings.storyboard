@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Profile Data-->
+        <!--Settings-->
         <scene sceneID="YnE-kL-8p8">
             <objects>
-                <viewController storyboardIdentifier="UserSettings" title="User Profile Data" id="zL5-Yd-Sla" customClass="UserSettingsViewController" customModule="MySampleApp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserSettings" title="Settings" id="zL5-Yd-Sla" customClass="UserSettingsViewController" customModule="MySampleApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WSX-Gn-Ay0"/>
                         <viewControllerLayoutGuide type="bottom" id="g8I-Yw-Kvs"/>

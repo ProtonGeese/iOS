@@ -39,9 +39,9 @@
 		E7A30F045F4D197300000000 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E2911AB9F2800000000 /* UserSettingsViewController.swift */; };
 		E7A30F0460E7BFE800000000 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E292B8F9BD700000000 /* MainViewController.swift */; };
 		E7A30F0461E16E7200000000 /* UserFiles.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E294BD4A88400000000 /* UserFiles.storyboard */; };
-		E7A30F046B0E168700000000 /* UserIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E298327A1F300000000 /* UserIdentityViewController.swift */; };
+		E7A30F046B0E168700000000 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E298327A1F300000000 /* UserProfileViewController.swift */; };
 		E7A30F047339E55800000000 /* UserFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E298158D29800000000 /* UserFilesViewController.swift */; };
-		E7A30F04751DAC2F00000000 /* UserIdentity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29BB6D16C900000000 /* UserIdentity.storyboard */; };
+		E7A30F04751DAC2F00000000 /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29BB6D16C900000000 /* UserProfile.storyboard */; };
 		E7A30F0475292BE500000000 /* NoSQLQueryResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29F6BB2AC100000000 /* NoSQLQueryResultViewController.swift */; };
 		E7A30F047755F11200000000 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E29414531FC00000000 /* SafariServices.framework */; };
 		E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DD70E29C77C985900000000 /* ContentDelivery.storyboard */; };
@@ -128,7 +128,7 @@
 		1DD70E297D5CA1E300000000 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = MySampleApp/Sdk/Google/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
 		1DD70E298158D29800000000 /* UserFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserFilesViewController.swift; path = MySampleApp/Demo/UserFiles/UserFilesViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E2981E9C86F00000000 /* AppAnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppAnalyticsViewController.swift; path = MySampleApp/Demo/AppAnalytics/AppAnalyticsViewController.swift; sourceTree = SOURCE_ROOT; };
-		1DD70E298327A1F300000000 /* UserIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserIdentityViewController.swift; path = MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift; sourceTree = SOURCE_ROOT; };
+		1DD70E298327A1F300000000 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserProfileViewController.swift; path = MySampleApp/Demo/UserIdentity/UserProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E2989EB3EFB00000000 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = MySampleApp/Sdk/Google/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
 		1DD70E298D1FC19800000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1DD70E2999B849A000000000 /* AEPStudents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AEPStudents.swift; path = MySampleApp/AmazonAws/Models/NoSQL/AEPStudents.swift; sourceTree = SOURCE_ROOT; };
@@ -138,7 +138,7 @@
 		1DD70E29AD734B3900000000 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "MySampleApp/App/Launch Screen.storyboard"; sourceTree = SOURCE_ROOT; };
 		1DD70E29AE66B31800000000 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSMobileHubHelper.framework; path = MySampleApp/AmazonAws/AWSMobileHubHelper.framework; sourceTree = "<group>"; };
 		1DD70E29B31E79F400000000 /* UserSettings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UserSettings.storyboard; path = MySampleApp/Demo/UserSettings/UserSettings.storyboard; sourceTree = SOURCE_ROOT; };
-		1DD70E29BB6D16C900000000 /* UserIdentity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UserIdentity.storyboard; path = MySampleApp/Demo/UserIdentity/UserIdentity.storyboard; sourceTree = SOURCE_ROOT; };
+		1DD70E29BB6D16C900000000 /* UserProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = UserProfile.storyboard; path = MySampleApp/Demo/UserIdentity/UserProfile.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29C77C985900000000 /* ContentDelivery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ContentDelivery.storyboard; path = MySampleApp/Demo/ContentDelivery/ContentDelivery.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29D187108300000000 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = MySampleApp/Sdk/Google/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		1DD70E29D3FA74CD00000000 /* AppAnalytics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = AppAnalytics.storyboard; path = MySampleApp/Demo/AppAnalytics/AppAnalytics.storyboard; sourceTree = SOURCE_ROOT; };
@@ -252,7 +252,7 @@
 				B401C979954F927B00000000 /* NoSQL */,
 				B401C979E26EAE4100000000 /* UserDataStorage */,
 				B401C9797CC8F00500000000 /* UserFiles */,
-				B401C9797C5AEA3300000000 /* UserIdentity */,
+				B401C9797C5AEA3300000000 /* UserProfile */,
 				B401C97994AFE88100000000 /* UserSettings */,
 			);
 			name = Demo;
@@ -269,13 +269,13 @@
 			path = mysampleapp/demo/contentdelivery;
 			sourceTree = "<group>";
 		};
-		B401C9797C5AEA3300000000 /* UserIdentity */ = {
+		B401C9797C5AEA3300000000 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
-				1DD70E29BB6D16C900000000 /* UserIdentity.storyboard */,
-				1DD70E298327A1F300000000 /* UserIdentityViewController.swift */,
+				1DD70E29BB6D16C900000000 /* UserProfile.storyboard */,
+				1DD70E298327A1F300000000 /* UserProfileViewController.swift */,
 			);
-			name = UserIdentity;
+			name = UserProfile;
 			path = mysampleapp/demo/useridentity;
 			sourceTree = "<group>";
 		};
@@ -503,7 +503,7 @@
 				E7A30F0429821F8A00000000 /* SignIn.storyboard in Resources */,
 				E7A30F04C298525200000000 /* AppAnalytics.storyboard in Resources */,
 				E7A30F0492800CC600000000 /* UserSettings.storyboard in Resources */,
-				E7A30F04751DAC2F00000000 /* UserIdentity.storyboard in Resources */,
+				E7A30F04751DAC2F00000000 /* UserProfile.storyboard in Resources */,
 				E7A30F04B4D5D7AB00000000 /* NoSQLDatabase.storyboard in Resources */,
 				D931F8311DAC48EE003DFD9B /* Welcome.storyboard in Resources */,
 				E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */,
@@ -573,7 +573,7 @@
 				E7A30F04EC708F4700000000 /* SignInViewController.swift in Sources */,
 				E7A30F045F4D197300000000 /* UserSettingsViewController.swift in Sources */,
 				E7A30F04A6BAB7E200000000 /* NoSQLModelHelpers.swift in Sources */,
-				E7A30F046B0E168700000000 /* UserIdentityViewController.swift in Sources */,
+				E7A30F046B0E168700000000 /* UserProfileViewController.swift in Sources */,
 				E7A30F04C9E02A5000000000 /* AWSMobileClient.swift in Sources */,
 				E7A30F044B9867A100000000 /* AEPStudents.swift in Sources */,
 			);

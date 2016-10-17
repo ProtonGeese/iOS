@@ -40,7 +40,7 @@ class MainViewController: UITableViewController {
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Retrieve user profile.",
                 comment: "Description for demo menu option."),
-            icon: "UserIcon", storyboard: "UserIdentity")
+            icon: "UserIcon", storyboard: "UserProfile")
         
         demoFeatures.append(demoFeature)
         
