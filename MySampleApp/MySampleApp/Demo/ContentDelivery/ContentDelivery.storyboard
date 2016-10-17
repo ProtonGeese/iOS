@@ -11,9 +11,9 @@
         <!--App Content Delivery-->
         <scene sceneID="toh-qV-xas">
             <objects>
-                <tableViewController storyboardIdentifier="ContentDeliveryViewController" title="App Content Delivery" id="VLa-cD-v27" customClass="ContentDeliveryViewController" customModule="MySampleApp" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContentDelivery" title="App Content Delivery" id="VLa-cD-v27" customClass="ContentDeliveryViewController" customModule="MySampleApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="22" sectionFooterHeight="22" id="j3k-wf-tss">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="yXy-Fu-3Mu">
@@ -382,94 +382,9 @@
             </objects>
             <point key="canvasLocation" x="1715" y="459"/>
         </scene>
-        <!--App Content Delivery-->
-        <scene sceneID="UJ0-Q8-5k9">
-            <objects>
-                <viewController storyboardIdentifier="ContentDelivery" title="App Content Delivery" id="wHA-BX-zyr" customClass="FeatureDescriptionViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LDZ-kL-Ntg"/>
-                        <viewControllerLayoutGuide type="bottom" id="XsL-zA-7br"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2l6-kT-BBm">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InB-1b-5h4">
-                                <frame key="frameInset" minX="201" minY="498" width="198" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" title="Demo Content Delivery" image="ContentDeliveryIconSmall">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VLa-cD-v27" kind="show" id="3Ae-uL-XE7"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Powered by Amazon S3 and Amazon CloudFront" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-SL-mcq">
-                                <frame key="frameInset" minX="174" minY="476" width="253" height="14"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKF-G0-5Tq">
-                                <frame key="frameInset" minX="20" minY="8" width="71" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Store app assets like resource files in the cloud. Download and cache files in your app." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02r-o6-S8A">
-                                <frame key="frameInset" minX="20" minY="36" width="560" height="41"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sample App Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfl-z7-0WJ">
-                                <frame key="frameInset" minX="20" minY="85" width="162" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi8-UT-nao">
-                                <frame key="frameInset" minX="20" minY="113" width="560" height="104"/>
-                                <string key="text">The Sample App demonstrates file download and caching by providing a remote file explorer. You can download files from Amazon S3 (and optionally Amazon CloudFront) and pin them to the cache on device by clicking on each file entry. From the menu, you can download all recent files, set the cache size limit, or clear the cache.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="02r-o6-S8A" firstAttribute="top" secondItem="IKF-G0-5Tq" secondAttribute="bottom" constant="8" symbolic="YES" id="4Cr-Zn-Zkx"/>
-                            <constraint firstItem="IKF-G0-5Tq" firstAttribute="top" secondItem="LDZ-kL-Ntg" secondAttribute="bottom" constant="8" symbolic="YES" id="HMx-Nm-H8k"/>
-                            <constraint firstItem="NMS-SL-mcq" firstAttribute="centerX" secondItem="InB-1b-5h4" secondAttribute="centerX" id="JUS-ba-LqF"/>
-                            <constraint firstItem="zfl-z7-0WJ" firstAttribute="top" secondItem="02r-o6-S8A" secondAttribute="bottom" constant="8" symbolic="YES" id="Jh1-cY-oc3"/>
-                            <constraint firstItem="02r-o6-S8A" firstAttribute="leading" secondItem="IKF-G0-5Tq" secondAttribute="leading" id="Oby-Ss-t0B"/>
-                            <constraint firstItem="InB-1b-5h4" firstAttribute="top" secondItem="NMS-SL-mcq" secondAttribute="bottom" constant="8" symbolic="YES" id="PeA-ET-oMf"/>
-                            <constraint firstItem="bi8-UT-nao" firstAttribute="leading" secondItem="NMS-SL-mcq" secondAttribute="trailing" constant="-355.5" id="Ud4-4g-dEf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="02r-o6-S8A" secondAttribute="trailing" id="VQs-K0-PAn"/>
-                            <constraint firstItem="bi8-UT-nao" firstAttribute="leading" secondItem="zfl-z7-0WJ" secondAttribute="leading" id="Y4n-pp-2Zg"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="IKF-G0-5Tq" secondAttribute="leading" id="bnJ-JC-EaO"/>
-                            <constraint firstItem="InB-1b-5h4" firstAttribute="centerX" secondItem="2l6-kT-BBm" secondAttribute="centerX" id="ld2-U2-Hr7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bi8-UT-nao" secondAttribute="trailing" id="p0h-vN-z9a"/>
-                            <constraint firstItem="bi8-UT-nao" firstAttribute="top" secondItem="zfl-z7-0WJ" secondAttribute="bottom" constant="8" symbolic="YES" id="q5t-Oa-6bE"/>
-                            <constraint firstItem="zfl-z7-0WJ" firstAttribute="leading" secondItem="02r-o6-S8A" secondAttribute="leading" id="u5o-92-Lgw"/>
-                            <constraint firstItem="XsL-zA-7br" firstAttribute="top" secondItem="InB-1b-5h4" secondAttribute="bottom" constant="8" symbolic="YES" id="yEG-hA-E4J"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Ud4-4g-dEf"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YdX-fQ-VYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-287" y="459"/>
-        </scene>
     </scenes>
     <resources>
         <image name="ContentDeliveryCheckmark" width="20" height="20"/>
-        <image name="ContentDeliveryIconSmall" width="30" height="30"/>
         <image name="ContentDeliveryStar" width="20" height="20"/>
     </resources>
 </document>

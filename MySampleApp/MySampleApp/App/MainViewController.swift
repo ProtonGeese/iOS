@@ -36,29 +36,29 @@ class MainViewController: UITableViewController {
             presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
-            name: NSLocalizedString("User Sign-in",
+            name: NSLocalizedString("User Profile",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Enable user login with popular 3rd party providers.",
+            detail: NSLocalizedString("Retrieve user profile.",
                 comment: "Description for demo menu option."),
-            icon: "UserIdentityIcon", storyboard: "UserIdentity")
+            icon: "UserIcon", storyboard: "UserIdentity")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("App Content Delivery",
+            name: NSLocalizedString("Lessons",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Store and distribute media assets and other files via global content delivery network.",
+            detail: NSLocalizedString("Place to start learning English",
                 comment: "Description for demo menu option."),
             icon: "ContentDeliveryIcon", storyboard: "ContentDelivery")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("User Data Storage",
+            name: NSLocalizedString("Dropbox",
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Save user files in the cloud and sync user data in key/value pairs.",
             comment: "Description for demo menu option."),
-            icon: "UserFilesIcon", storyboard: "UserDataStorage")
+            icon: "UserFilesIcon", storyboard: "UserFiles")
         
         demoFeatures.append(demoFeature)
         
@@ -72,7 +72,7 @@ class MainViewController: UITableViewController {
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("NoSQL",
+            name: NSLocalizedString("Dynamodb",
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Store data in the cloud.",
                 comment: "Description for demo menu option."),

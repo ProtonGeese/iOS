@@ -44,4 +44,10 @@ class UserIdentityViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func Settings(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "UserSettings", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("UserSettings")
+        navigationController!.pushViewController(viewController, animated: true)
+    }
 }
