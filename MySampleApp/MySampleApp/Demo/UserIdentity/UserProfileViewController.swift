@@ -13,6 +13,7 @@
 
 import Foundation
 import UIKit
+import AWSDynamoDB
 import AWSMobileHubHelper
 
 class UserProfileViewController: UIViewController {
@@ -20,6 +21,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userID: UILabel!
+    @IBOutlet weak var userEmailAddress: UILabel!
     
     // MARK: - View lifecycle
     
@@ -43,11 +45,38 @@ class UserProfileViewController: UIViewController {
                 userImageView.image = UIImage(named: "UserIcon")
             }
         }
+        
+        self.getProfile()
     }
     
     @IBAction func Settings(sender: UIButton) {
         let storyboard = UIStoryboard(name: "UserSettings", bundle: nil)
         let viewController = storyboard.instantiateViewControllerWithIdentifier("UserSettings")
         navigationController!.pushViewController(viewController, animated: true)
+    }
+    
+    func getProfile(){
+    
+        
+        let objectMapper = AWSDynamoDBObjectMapper.defaultDynamoDBObjectMapper()
+        let queryExpression = AWSDynamoDBQueryExpression()
+        queryExpression.keyConditionExpression = "#hashAttribute = :hashAttributeWithComplexName"
+        queryExpression.expressionAttributeNames = ["#hashAttribute": "EmailAddress"]
+        queryExpression.expressionAttributeValues = [":hashAttribute": "xu.1487"]
+        
+        
+        objectMapper.query(UserProfileTableRow.self, expression: queryExpression) .continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: { (task:AWSTask!) in
+            if (task.error == nil) {
+                if (task.result != nil) {
+                    let tableRow = task.result as! UserProfileTableRow
+                    
+                    self.userEmailAddress.text = tableRow.EmailAddress
+                }
+            }
+            else {
+                self.userEmailAddress.text = task.error.debugDescription
+            }
+            return nil
+        })
     }
 }

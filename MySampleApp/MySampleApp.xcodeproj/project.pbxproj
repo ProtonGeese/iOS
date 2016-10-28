@@ -10,6 +10,7 @@
 		0909B5AD1DAC3737001183D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */; };
 		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
 		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
+		D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C27A91DC147F600185388 /* UserProfileDB.swift */; };
 		D931F8311DAC48EE003DFD9B /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909B5AA1DAC3689001183D9 /* Welcome.storyboard */; };
 		E7A30F040446AA9000000000 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E293871749800000000 /* Security.framework */; };
 		E7A30F0404E8BE0700000000 /* AEPStudentsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E29E6EC5BAF00000000 /* AEPStudentsTable.swift */; };
@@ -158,6 +159,7 @@
 		483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OsuHondaAEPLogo 2.png"; path = "mysampleapp/app/supportingfiles/OsuHondaAEPLogo 2.png"; sourceTree = SOURCE_ROOT; };
 		483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OsuHondaAEPLogo.png; path = mysampleapp/app/supportingfiles/OsuHondaAEPLogo.png; sourceTree = SOURCE_ROOT; };
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
+		D92C27A91DC147F600185388 /* UserProfileDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileDB.swift; path = MySampleApp/Demo/UserIdentity/UserProfileDB.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			children = (
 				1DD70E29BB6D16C900000000 /* UserProfile.storyboard */,
 				1DD70E298327A1F300000000 /* UserProfileViewController.swift */,
+				D92C27A91DC147F600185388 /* UserProfileDB.swift */,
 			);
 			name = UserProfile;
 			path = mysampleapp/demo/useridentity;
@@ -557,6 +560,7 @@
 				E7A30F04FFF3380B00000000 /* ContentDeliveryViewController.swift in Sources */,
 				E7A30F0404E8BE0700000000 /* AEPStudentsTable.swift in Sources */,
 				E7A30F047339E55800000000 /* UserFilesViewController.swift in Sources */,
+				D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */,
 				E7A30F04C9EBBD7400000000 /* NoSQLTableListViewController.swift in Sources */,
 				E7A30F04A97ADB4F00000000 /* NoSQLTableFactory.swift in Sources */,
 				E7A30F04DBDAD15500000000 /* AppDelegate.swift in Sources */,
