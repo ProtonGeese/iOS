@@ -14,8 +14,8 @@
 
 import UIKit
 import AWSMobileHubHelper
-import FBSDKLoginKit
 import GoogleSignIn
+import AWSCognitoIdentityProvider
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var anchorView: UIView!
@@ -49,24 +49,6 @@ class SignInViewController: UIViewController {
                     // perform successful login actions here
             })
 
-                // Facebook login permissions can be optionally set, but must be set
-                // before user authenticates.
-                AWSFacebookSignInProvider.sharedInstance().setPermissions(["public_profile"]);
-                
-                // Facebook login behavior can be optionally set, but must be set
-                // before user authenticates.
-//                AWSFacebookSignInProvider.sharedInstance().setLoginBehavior(FBSDKLoginBehavior.Web.rawValue)
-                
-                // Facebook UI Setup
-                facebookButton.addTarget(self, action: "handleFacebookLogin", forControlEvents: .TouchUpInside)
-                let facebookButtonImage: UIImage? = UIImage(named: "FacebookButton")
-                if let facebookButtonImage = facebookButtonImage{
-                    facebookButton.setImage(facebookButtonImage, forState: .Normal)
-                } else {
-                     print("Facebook button image unavailable. We're hiding this button.")
-                    facebookButton.hidden = true
-                }
-                view.addConstraint(NSLayoutConstraint(item: facebookButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForFacebook(), attribute: .Bottom, multiplier: 1, constant: 8.0))
 
                 // Google login scopes can be optionally set, but must be set
                 // before user authenticates.
@@ -101,8 +83,10 @@ class SignInViewController: UIViewController {
     }
     
     // MARK: - Utility Methods
+
     
     func handleLoginWithSignInProvider(signInProvider: AWSSignInProvider) {
+        
         AWSIdentityManager.defaultIdentityManager().loginWithSignInProvider(signInProvider, completionHandler: {(result: AnyObject?, error: NSError?) -> Void in
             // If no error reported by SignInProvider, discard the sign-in view controller.
             if error == nil {
@@ -110,7 +94,11 @@ class SignInViewController: UIViewController {
                         self.dismissViewControllerAnimated(true, completion: nil)
                 })
             }
-             print("result = \(result), error = \(error)")
+            else {
+                dispatch_async(dispatch_get_main_queue(),{
+                    self.displayError(error.debugDescription)
+                })
+            }
         })
     }
 
@@ -123,26 +111,75 @@ class SignInViewController: UIViewController {
     }
 
     // MARK: - IBActions
-    func handleFacebookLogin() {
-        handleLoginWithSignInProvider(AWSFacebookSignInProvider.sharedInstance())
-    }
-    
     
     func handleGoogleLogin() {
         handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
     }
     
+    
+    //var passwordAuthenticationCompletion: AWSTaskCompletionSource = AWSTaskCompletionSource.init()
     func handleCustomLogin() {
-        // Handle Login logic for custom sign-in here.
-        let alertController = UIAlertController(title: NSLocalizedString("Custom Sign-In Demo", comment: "Label for custom sign-in dialog."), message: NSLocalizedString("This is just a demo of custom sign-in.", comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
+        
+        if (customUserIdField.text != nil) && (customPasswordField.text != nil) {
+            
+            let customSignInProvider = AWSCUPIdPSignInProvider.sharedInstance
+            
+            // Push userId and password to our AWSCUPIdPSignInProvider
+            customSignInProvider.customUserIdField = customUserIdField.text
+            customSignInProvider.customPasswordField = customPasswordField.text
+            
+            handleLoginWithSignInProvider(customSignInProvider)
+        }
+    }
+ 
+    /*
+    
+    func handleCustomLogin() {
+        
+        if (customUserIdField.text == nil) {
+            self.displayError("User Name Empty")
+        }
+        else if (customPasswordField.text == nil){
+            self.displayError("Password Empty")
+
+        }
+        else {
+            let user = (UIApplication.sharedApplication().delegate as! AppDelegate).userPool!.getUser(customUserIdField.text!)
+
+            user.getSession(customUserIdField.text!, password: customPasswordField.text!, validationData: nil, scopes: nil).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: {
+                (task:AWSTask!) -> AnyObject! in
+                
+                if task.error == nil {
+                    
+                    
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    })
+                } else {
+                    self.displayError(task.error.debugDescription)
+                }
+                
+                return nil
+            })
+            
+        }
+ 
+        //self.passwordAuthenticationCompletion.setResult(AWSCognitoIdentityPasswordAuthenticationDetails(username: customUserIdField.text!, password: customPasswordField.text!))
+    }
+    
+    */
+    
+    func handleCustomCreateAccount() {
+        // Handle Create Account action for custom sign-in here.
+        let alertController = UIAlertController(title: NSLocalizedString("Custom Sign-In Demo", comment: "Label for custom sign-in dialog."), message: NSLocalizedString("This is just a demo of custom sign-in Create Account Button.", comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
         let doneAction = UIAlertAction(title: NSLocalizedString("Done", comment: "Label to complete stubbed custom sign-in."), style: .Cancel, handler: nil)
         alertController.addAction(doneAction)
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func handleCustomCreateAccount() {
+    func displayError(info:String) {
         // Handle Create Account action for custom sign-in here.
-        let alertController = UIAlertController(title: NSLocalizedString("Custom Sign-In Demo", comment: "Label for custom sign-in dialog."), message: NSLocalizedString("This is just a demo of custom sign-in Create Account Button.", comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
+        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: "Label for custom sign-in dialog."), message: NSLocalizedString(info, comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
         let doneAction = UIAlertAction(title: NSLocalizedString("Done", comment: "Label to complete stubbed custom sign-in."), style: .Cancel, handler: nil)
         alertController.addAction(doneAction)
         presentViewController(alertController, animated: true, completion: nil)

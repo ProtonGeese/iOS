@@ -30,12 +30,14 @@ class UserProfileViewController: UIViewController {
 
         let identityManager = AWSIdentityManager.defaultIdentityManager()
         
+        // Load username to profile
         if let identityUserName = identityManager.userName {
             userName.text = identityUserName
         } else {
             userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")
         }
         
+        // Load user img to profile
         userID.text = identityManager.identityId
         if let imageURL = identityManager.imageURL {
             let imageData = NSData(contentsOfURL: imageURL)!
@@ -46,7 +48,10 @@ class UserProfileViewController: UIViewController {
             }
         }
         
-        self.getProfile()
+        //TODO
+        // Load email address to user profile
+        //userEmailAddress.text = identityManager.e
+        
     }
     
     @IBAction func Settings(sender: UIButton) {
@@ -54,7 +59,7 @@ class UserProfileViewController: UIViewController {
         let viewController = storyboard.instantiateViewControllerWithIdentifier("UserSettings")
         navigationController!.pushViewController(viewController, animated: true)
     }
-    
+    /* Abandon
     func getProfile(){
     
         
@@ -79,4 +84,5 @@ class UserProfileViewController: UIViewController {
             return nil
         })
     }
+ */
 }

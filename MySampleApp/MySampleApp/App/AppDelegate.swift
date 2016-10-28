@@ -12,17 +12,72 @@
 //
 
 import UIKit
+import AWSCore
+import AWSCognitoIdentityProvider
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+class AppDelegate: UIResponder, UIApplicationDelegate, AWSCognitoIdentityInteractiveAuthenticationDelegate {
     var window: UIWindow?
-    
+    var userPool: AWSCognitoIdentityUserPool?
+    var user: AWSCognitoIdentityUser?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,
+                                                                identityPoolId:"us-west-2:fe46485b-2d7a-45dc-ae74-ad52a0c4e1ae")
+        
+        let configuration = AWSServiceConfiguration(region:.USWest2, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        
+        let configurationUserPool = AWSCognitoIdentityUserPoolConfiguration.init(
+            clientId: "6h6bct7inbb508tc5sq3durs6",
+            clientSecret: "1s8oruqq3ojo7cvei0tegq48b1d8rek474rl9l7hlkj4egvbr218",
+            poolId: "us-west-2_ffhFADAsb")
+        
+        
+        
+        AWSCognitoIdentityUserPool.registerCognitoIdentityUserPoolWithConfiguration(configuration, userPoolConfiguration: configurationUserPool, forKey: "UserPool")
+        
+        
+        self.userPool = AWSCognitoIdentityUserPool(forKey: "UserPool")
+        
+        self.userPool!.delegate = self
+        //self.user = self.userPool!.currentUser()
+ 
+        
+        return true;
     }
+
+    /*
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        // Override point for customization after application launch.
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,
+                                                                identityPoolId:"us-west-2:fe46485b-2d7a-45dc-ae74-ad52a0c4e1ae")
+        
+        let configuration = AWSServiceConfiguration(region:.USWest2, credentialsProvider:credentialsProvider)
+     
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        
+        let configurationUserPool = AWSCognitoIdentityUserPoolConfiguration.init(
+            clientId: "4d64ovqgumcss34057u924lmd",
+            clientSecret: "6837nth39radjpo09psq50dfbpkcc4rt09qu08kn3l2tg1jtlko",
+            poolId: "us-west-2_ffhFADAsb")
+        
+        
+        AWSCognitoIdentityUserPool.registerCognitoIdentityUserPoolWithConfiguration(configuration, userPoolConfiguration: configurationUserPool, forKey: "UserPool")
+        
+        self.userPool = AWSCognitoIdentityUserPool(forKey: "UserPool")
+        
+        self.userPool!.delegate = self
+        
+        return true;
+        
+    }
+    */
+    
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         // print("application application: \(application.description), openURL: \(url.absoluteURL), sourceApplication: \(sourceApplication)")

@@ -9,7 +9,7 @@
 			<key>Default</key>
 			<dict>
 				<key>Region</key>
-				<string>us-east-1</string>
+				<string>us-west-2</string>
 			</dict>
 		</dict>
 		<key>ContentManager</key>
@@ -29,9 +29,9 @@
 				<key>Default</key>
 				<dict>
 					<key>PoolId</key>
-					<string>us-east-1:4923515f-571b-4fac-ac7a-13a1251e00c3</string>
+					<string>us-west-2:fe46485b-2d7a-45dc-ae74-ad52a0c4e1ae</string>
 					<key>Region</key>
-					<string>us-east-1</string>
+					<string>us-west-2</string>
 				</dict>
 			</dict>
 		</dict>
@@ -47,6 +47,30 @@
 		<dict>
 			<key>Default</key>
 			<dict>
+				<key>SignInProviderKeyDictionary</key>
+				<dict>
+					<key>AWSCUPIdPSignInProvider</key>
+					<string>Cognito Pool</string>
+					<key>AWSFacebookSignInProvider</key>
+					<string>Facebook</string>
+					<key>AWSGoogleSignInProvider</key>
+					<string>Google</string>
+				</dict>
+				<key>CognitoYourUserPools</key>
+				<dict>
+					<key>COGNITO_REGIONTYPE</key>
+					<string>USWest2</string>
+					<key>COGNITO_USER_POOL_APP_CLIENT_ID</key>
+					<string>6h6bct7inbb508tc5sq3durs6</string>
+					<key>COGNITO_USER_POOL_APP_CLIENT_SECRET</key>
+					<string>1s8oruqq3ojo7cvei0tegq48b1d8rek474rl9l7hlkj4egvbr218</string>
+					<key>COGNITO_USER_POOL_ID</key>
+					<string>us-west-2_ffhFADAsb</string>
+					<key>COGNITO_USER_POOL_IDP_NAME</key>
+					<string>$(COGNITO_USER_POOL_IDP_NAME)</string>
+					<key>COGNITO_USER_POOL_NAME</key>
+					<string>$(COGNITO_USER_POOL_NAME)</string>
+				</dict>
 				<key>Google</key>
 				<dict>
 					<key>ClientId</key>

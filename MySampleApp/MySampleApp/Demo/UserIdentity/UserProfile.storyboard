@@ -64,18 +64,11 @@
                                     <action selector="Settings:" destination="hif-eS-niX" eventType="touchUpInside" id="FOy-7e-fmJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-Qb-YJD">
-                                <frame key="frameInset" minX="126" minY="340" width="122" height="13.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-Qb-YJD">
+                                <frame key="frameInset" minX="136" minY="394" width="122" height="13.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmA-zm-XGQ">
-                                <frame key="frameInset" minX="68" minY="387" width="265" height="260"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -111,7 +104,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="userEmailAddress" destination="cmA-zm-XGQ" id="qM2-9N-uQa"/>
                         <outlet property="userID" destination="AHP-BY-rSy" id="48E-fW-CUf"/>
                         <outlet property="userImageView" destination="9uY-3n-rL1" id="iMc-Ky-f7u"/>
                         <outlet property="userName" destination="ipd-BY-jJ5" id="GeL-0m-Zvx"/>
