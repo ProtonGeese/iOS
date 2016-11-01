@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0909B5AD1DAC3737001183D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */; };
+		0909B5AD1DAC3737001183D9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0909B5AC1DAC3737001183D9 /* SettingsViewController.swift */; };
+		0953D95A1DC6D99D00D93BCA /* Practices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0953D9591DC6D99D00D93BCA /* Practices.storyboard */; };
+		0953D95E1DC6E43000D93BCA /* PracticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953D95D1DC6E43000D93BCA /* PracticesViewController.swift */; };
+		0953D9601DC6EBDC00D93BCA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953D95F1DC6EBDC00D93BCA /* Lesson.swift */; };
 		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
 		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
 		D91D3A841DC307E30023E90C /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */; };
 		D91D3A851DC307F30023E90C /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */; };
 		D91D3A861DC307F30023E90C /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C27A91DC147F600185388 /* UserProfileDB.swift */; };
-		D931F8311DAC48EE003DFD9B /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909B5AA1DAC3689001183D9 /* Welcome.storyboard */; };
+		D931F8311DAC48EE003DFD9B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909B5AA1DAC3689001183D9 /* Settings.storyboard */; };
 		D9EAA44D1DC3243B0072DEB2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E296B807AD500000000 /* AWSDynamoDB.framework */; };
 		D9EAA44E1DC3243B0072DEB2 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E296B807AD500000000 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9F3B8FC1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3B8FB1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift */; };
@@ -98,8 +101,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0909B5AA1DAC3689001183D9 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = MySampleApp/Demo/Welcome/Welcome.storyboard; sourceTree = SOURCE_ROOT; };
-		0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = MySampleApp/Demo/Welcome/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		0909B5AA1DAC3689001183D9 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = MySampleApp/Demo/Welcome/Settings.storyboard; sourceTree = SOURCE_ROOT; };
+		0909B5AC1DAC3737001183D9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = MySampleApp/Demo/Welcome/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
+		0953D9591DC6D99D00D93BCA /* Practices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practices.storyboard; sourceTree = SOURCE_ROOT; };
+		0953D95D1DC6E43000D93BCA /* PracticesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PracticesViewController.swift; sourceTree = SOURCE_ROOT; };
+		0953D95F1DC6EBDC00D93BCA /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E290348E26300000000 /* ContentDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentDeliveryViewController.swift; path = MySampleApp/Demo/ContentDelivery/ContentDeliveryViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29049DAC6500000000 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = MySampleApp/App/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E2911AB9F2800000000 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSettingsViewController.swift; path = MySampleApp/Demo/UserSettings/UserSettingsViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -203,10 +209,20 @@
 		0909B5A71DAC357C001183D9 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				0909B5AA1DAC3689001183D9 /* Welcome.storyboard */,
-				0909B5AC1DAC3737001183D9 /* WelcomeViewController.swift */,
+				0909B5AA1DAC3689001183D9 /* Settings.storyboard */,
+				0909B5AC1DAC3737001183D9 /* SettingsViewController.swift */,
 			);
 			name = Welcome;
+			sourceTree = "<group>";
+		};
+		0953D9581DC6D98F00D93BCA /* Practices */ = {
+			isa = PBXGroup;
+			children = (
+				0953D9591DC6D99D00D93BCA /* Practices.storyboard */,
+				0953D95D1DC6E43000D93BCA /* PracticesViewController.swift */,
+				0953D95F1DC6EBDC00D93BCA /* Lesson.swift */,
+			);
+			name = Practices;
 			sourceTree = "<group>";
 		};
 		B401C97902F51D2700000000 /* AmazonAws */ = {
@@ -251,6 +267,7 @@
 		B401C9795BDD89CB00000000 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				0953D9581DC6D98F00D93BCA /* Practices */,
 				0909B5A71DAC357C001183D9 /* Welcome */,
 				B401C979E7BF05DB00000000 /* AppAnalytics */,
 				B401C97962ABC3FB00000000 /* ContentDelivery */,
@@ -511,10 +528,11 @@
 				E7A30F0492800CC600000000 /* UserSettings.storyboard in Resources */,
 				E7A30F04751DAC2F00000000 /* UserProfile.storyboard in Resources */,
 				E7A30F04B4D5D7AB00000000 /* NoSQLDatabase.storyboard in Resources */,
-				D931F8311DAC48EE003DFD9B /* Welcome.storyboard in Resources */,
+				D931F8311DAC48EE003DFD9B /* Settings.storyboard in Resources */,
 				E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */,
 				E7A30F04D4A0F94600000000 /* UserDataStorage.storyboard in Resources */,
 				E7A30F0411A9718900000000 /* Launch Screen.storyboard in Resources */,
+				0953D95A1DC6D99D00D93BCA /* Practices.storyboard in Resources */,
 				483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */,
 				E7A30F0497DCFE6400000000 /* Images.xcassets in Resources */,
 				E7A30F0461E16E7200000000 /* UserFiles.storyboard in Resources */,
@@ -568,6 +586,7 @@
 				E7A30F04A97ADB4F00000000 /* NoSQLTableFactory.swift in Sources */,
 				E7A30F04DBDAD15500000000 /* AppDelegate.swift in Sources */,
 				E7A30F04BE67CC2300000000 /* UserDataStorageViewController.swift in Sources */,
+				0953D95E1DC6E43000D93BCA /* PracticesViewController.swift in Sources */,
 				E7A30F0486D5677100000000 /* DemoFeature.swift in Sources */,
 				E7A30F0433D6706B00000000 /* ColorThemeSettings.swift in Sources */,
 				E7A30F041B36786A00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
@@ -575,7 +594,8 @@
 				E7A30F04CE80434C00000000 /* UtilityFunctions.swift in Sources */,
 				E7A30F04EF0DE5EB00000000 /* NoSQLTableViewController.swift in Sources */,
 				E7A30F0460E7BFE800000000 /* MainViewController.swift in Sources */,
-				0909B5AD1DAC3737001183D9 /* WelcomeViewController.swift in Sources */,
+				0909B5AD1DAC3737001183D9 /* SettingsViewController.swift in Sources */,
+				0953D9601DC6EBDC00D93BCA /* Lesson.swift in Sources */,
 				E7A30F0434B6C57800000000 /* AppAnalyticsViewController.swift in Sources */,
 				E7A30F0475292BE500000000 /* NoSQLQueryResultViewController.swift in Sources */,
 				E7A30F04EC708F4700000000 /* SignInViewController.swift in Sources */,

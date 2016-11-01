@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class HomeController: UIViewController{
+class SettingsViewController: UIViewController{
     
     @IBOutlet weak var WelcomeTextLabel: UILabel!
     @IBOutlet weak var HowToGetStartedTextButton: UIButton!
