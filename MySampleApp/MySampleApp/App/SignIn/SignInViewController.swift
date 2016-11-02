@@ -14,20 +14,17 @@
 
 import UIKit
 import AWSMobileHubHelper
-import GoogleSignIn
 import AWSCognitoIdentityProvider
 
 class SignInViewController: UIViewController {
     @IBOutlet weak var anchorView: UIView!
 
-    @IBOutlet weak var facebookButton: UIButton!
-
-    @IBOutlet weak var googleButton: UIButton!
-
     @IBOutlet weak var customProviderButton: UIButton!
     @IBOutlet weak var customCreateAccountButton: UIButton!
     @IBOutlet weak var customForgotPasswordButton: UIButton!
-    @IBOutlet weak var customUserIdField: UITextField!
+    //Editing Point
+    //@IBOutlet weak var customUserIdField: UITextField!
+    @IBOutlet weak var customEmailAddressField: UITextField!
     @IBOutlet weak var customPasswordField: UITextField!
     @IBOutlet weak var leftHorizontalBar: UIView!
     @IBOutlet weak var rightHorizontalBar: UIView!
@@ -48,30 +45,7 @@ class SignInViewController: UIViewController {
                 usingBlock: {(note: NSNotification) -> Void in
                     // perform successful login actions here
             })
-
-
-                // Google login scopes can be optionally set, but must be set
-                // before user authenticates.
-                AWSGoogleSignInProvider.sharedInstance().setScopes(["profile", "openid"])
-                
-                // Sets up the view controller that the Google signin will be launched from.
-                AWSGoogleSignInProvider.sharedInstance().setViewControllerForGoogleSignIn(self)
-                
-                // Google UI Setup
-                googleButton.addTarget(self, action: "handleGoogleLogin", forControlEvents: .TouchUpInside)
-                let googleButtonImage: UIImage? = UIImage(named: "GoogleButton")
-                if let googleButtonImage = googleButtonImage {
-                    googleButton.setImage(googleButtonImage, forState: .Normal)
-                } else {
-                     print("Google button image unavailable. We're hiding this button.")
-                    googleButton.hidden = true
-                }
-                view.addConstraint(NSLayoutConstraint(item: googleButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForGoogle(), attribute: .Bottom, multiplier: 1, constant: 8.0))
-                // Custom UI Setup
-                customProviderButton.addTarget(self, action: "handleCustomLogin", forControlEvents: .TouchUpInside)
-                customCreateAccountButton.addTarget(self, action: "handleCustomCreateAccount", forControlEvents: .TouchUpInside)
-                customForgotPasswordButton.addTarget(self, action: "handleCustomForgotPassword", forControlEvents: .TouchUpInside)
-                customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
+        
     }
     
     deinit {
@@ -96,7 +70,13 @@ class SignInViewController: UIViewController {
             }
             else {
                 dispatch_async(dispatch_get_main_queue(),{
-                    self.displayError(error.debugDescription)
+                    if(error?.code == 16){
+                        self.displayError("", info: "Incorrect username or password")
+                    }
+                    else{
+                        self.displayError("Error", info:error.debugDescription)
+                    }
+                    
                 })
             }
         })
@@ -112,20 +92,17 @@ class SignInViewController: UIViewController {
 
     // MARK: - IBActions
     
-    func handleGoogleLogin() {
-        handleLoginWithSignInProvider(AWSGoogleSignInProvider.sharedInstance())
-    }
-    
     
     //var passwordAuthenticationCompletion: AWSTaskCompletionSource = AWSTaskCompletionSource.init()
-    func handleCustomLogin() {
+    @IBAction func handleCustomLogin(sender: UIButton) {
         
-        if (customUserIdField.text != nil) && (customPasswordField.text != nil) {
+        if (customEmailAddressField.text != "") && (customPasswordField.text != "") {
             
             let customSignInProvider = AWSCUPIdPSignInProvider.sharedInstance
             
-            // Push userId and password to our AWSCUPIdPSignInProvider
-            customSignInProvider.customUserIdField = customUserIdField.text
+            // Push email address and password to AWSCUPIdPSignInProvider
+
+            customSignInProvider.customUserEmailAddress = customEmailAddressField.text
             customSignInProvider.customPasswordField = customPasswordField.text
             
             handleLoginWithSignInProvider(customSignInProvider)
@@ -169,17 +146,9 @@ class SignInViewController: UIViewController {
     
     */
     
-    func handleCustomCreateAccount() {
+    func displayError(title: String, info:String) {
         // Handle Create Account action for custom sign-in here.
-        let alertController = UIAlertController(title: NSLocalizedString("Custom Sign-In Demo", comment: "Label for custom sign-in dialog."), message: NSLocalizedString("This is just a demo of custom sign-in Create Account Button.", comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
-        let doneAction = UIAlertAction(title: NSLocalizedString("Done", comment: "Label to complete stubbed custom sign-in."), style: .Cancel, handler: nil)
-        alertController.addAction(doneAction)
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func displayError(info:String) {
-        // Handle Create Account action for custom sign-in here.
-        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: "Label for custom sign-in dialog."), message: NSLocalizedString(info, comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
+        let alertController = UIAlertController(title: NSLocalizedString(title, comment: "Label for custom sign-in dialog."), message: NSLocalizedString(info, comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
         let doneAction = UIAlertAction(title: NSLocalizedString("Done", comment: "Label to complete stubbed custom sign-in."), style: .Cancel, handler: nil)
         alertController.addAction(doneAction)
         presentViewController(alertController, animated: true, completion: nil)
@@ -195,10 +164,5 @@ class SignInViewController: UIViewController {
 
     func anchorViewForFacebook() -> UIView {
             return orSignInWithLabel
-    }
-    
-    func anchorViewForGoogle() -> UIView {
-            return facebookButton
-        
     }
 }

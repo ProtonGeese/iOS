@@ -29,7 +29,7 @@
 				<key>Default</key>
 				<dict>
 					<key>PoolId</key>
-					<string>us-west-2:fe46485b-2d7a-45dc-ae74-ad52a0c4e1ae</string>
+					<string>us-west-2:a200bb6f-06f2-44a5-b132-cb1abf3b032f</string>
 					<key>Region</key>
 					<string>us-west-2</string>
 				</dict>
@@ -61,11 +61,11 @@
 					<key>COGNITO_REGIONTYPE</key>
 					<string>USWest2</string>
 					<key>COGNITO_USER_POOL_APP_CLIENT_ID</key>
-					<string>6h6bct7inbb508tc5sq3durs6</string>
+					<string>4u86a8hs9tknn2gk0963qec8a9</string>
 					<key>COGNITO_USER_POOL_APP_CLIENT_SECRET</key>
-					<string>1s8oruqq3ojo7cvei0tegq48b1d8rek474rl9l7hlkj4egvbr218</string>
+					<string>ath91gls40pkterf82ga3ftchtbkp7b1i6oor4rqb9dq6n9h9jd</string>
 					<key>COGNITO_USER_POOL_ID</key>
-					<string>us-west-2_ffhFADAsb</string>
+					<string>us-west-2_AWiYs0HNt</string>
 					<key>COGNITO_USER_POOL_IDP_NAME</key>
 					<string>$(COGNITO_USER_POOL_IDP_NAME)</string>
 					<key>COGNITO_USER_POOL_NAME</key>

@@ -142,15 +142,26 @@ class AWSCUPIdPSignInProvider: NSObject, AWSSignInProvider {
     // not a great way to do it, but for demonstration
     // these are the parameters for login
     
+    var customUserEmailAddress:String? = ""
     var customUserIdField:String? = ""
     var customPasswordField:String? = ""
+    
+    func getUsernameByEmailAddress(){
+        if (customUserEmailAddress != ""){
+            customUserIdField = customUserEmailAddress
+        }
+        else{
+            print("Email Address can't be empty")
+        }
+    }
     
     func login(completionHandler: AWSIdentityManagerCompletionBlock )
         -> Void  {
             
             configureIdentityManager()
+            getUsernameByEmailAddress()
             
-            if (customUserIdField != nil) && (customUserIdField != "") && (customPasswordField != nil)  && (customPasswordField != "")  {
+            if (customUserIdField != "") && (customPasswordField != "")  {
                 self.userPoolUser = userPool!.getUser(customUserIdField!)
                 self.userPoolUser!.getSession(customUserIdField!, password: customPasswordField!, validationData: nil).continueWithBlock { (task) in
                     

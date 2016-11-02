@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AWSCognitoIdentityInterac
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USWest2,
-                                                                identityPoolId:"us-west-2:fe46485b-2d7a-45dc-ae74-ad52a0c4e1ae")
+                                                                identityPoolId:"us-west-2:a200bb6f-06f2-44a5-b132-cb1abf3b032f")
         
         let configuration = AWSServiceConfiguration(region:.USWest2, credentialsProvider:credentialsProvider)
         
@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AWSCognitoIdentityInterac
         
         
         let configurationUserPool = AWSCognitoIdentityUserPoolConfiguration.init(
-            clientId: "6h6bct7inbb508tc5sq3durs6",
-            clientSecret: "1s8oruqq3ojo7cvei0tegq48b1d8rek474rl9l7hlkj4egvbr218",
-            poolId: "us-west-2_ffhFADAsb")
+            clientId: "4u86a8hs9tknn2gk0963qec8a9",
+            clientSecret: "ath91gls40pkterf82ga3ftchtbkp7b1i6oor4rqb9dq6n9h9jd",
+            poolId: "us-west-2_AWiYs0HNt")
         
         
         

@@ -18,6 +18,7 @@
 		D91D3A861DC307F30023E90C /* AWSCognitoIdentityProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C27A91DC147F600185388 /* UserProfileDB.swift */; };
 		D931F8311DAC48EE003DFD9B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0909B5AA1DAC3689001183D9 /* Settings.storyboard */; };
+		D95672FE1DCAB03F001940A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95672FD1DCAB03F001940A5 /* SignUpViewController.swift */; };
 		D9EAA44D1DC3243B0072DEB2 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E296B807AD500000000 /* AWSDynamoDB.framework */; };
 		D9EAA44E1DC3243B0072DEB2 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E296B807AD500000000 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9F3B8FC1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F3B8FB1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift */; };
@@ -168,6 +169,7 @@
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
 		D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCognitoIdentityProvider.framework; path = MySampleApp/Sdk/Aws/AWSCognitoIdentityProvider.framework; sourceTree = "<group>"; };
 		D92C27A91DC147F600185388 /* UserProfileDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileDB.swift; path = MySampleApp/Demo/UserIdentity/UserProfileDB.swift; sourceTree = SOURCE_ROOT; };
+		D95672FD1DCAB03F001940A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = MySampleApp/App/SignIn/SignUpViewController.swift; sourceTree = SOURCE_ROOT; };
 		D9F3B8FB1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AWSCUPIdPSignInProvider.swift; path = MySampleApp/App/SignIn/AWSCUPIdPSignInProvider.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 		B401C9790444F97300000000 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				D95672FD1DCAB03F001940A5 /* SignUpViewController.swift */,
 				1DD70E29EE4B346200000000 /* SignIn.storyboard */,
 				1DD70E29FBBEC07A00000000 /* SignInViewController.swift */,
 				D9F3B8FB1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift */,
@@ -584,6 +587,7 @@
 				D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */,
 				E7A30F04C9EBBD7400000000 /* NoSQLTableListViewController.swift in Sources */,
 				E7A30F04A97ADB4F00000000 /* NoSQLTableFactory.swift in Sources */,
+				D95672FE1DCAB03F001940A5 /* SignUpViewController.swift in Sources */,
 				E7A30F04DBDAD15500000000 /* AppDelegate.swift in Sources */,
 				E7A30F04BE67CC2300000000 /* UserDataStorageViewController.swift in Sources */,
 				0953D95E1DC6E43000D93BCA /* PracticesViewController.swift in Sources */,
