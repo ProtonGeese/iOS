@@ -73,9 +73,9 @@ class UserFilesViewController: UITableViewController {
                     self.pathLabel.text = "\(prefix.substringFromIndex(UserFilesPublicDirectoryName.endIndex))"
                 }
                 if (prefix.hasPrefix(UserFilesPrivateDirectoryName)) {
-                    let userId = AWSIdentityManager.defaultIdentityManager().identityId!
-                    let subStringRange: Range<String.Index> = prefix.startIndex.advancedBy(UserFilesPrivateDirectoryName.characters.count + userId.characters.count + 1)..<prefix.endIndex.advancedBy(-1)
-                    self.pathLabel.text = "\(prefix.substringWithRange(subStringRange))"
+                    let userId = AWSIdentityManager.defaultIdentityManager().userName!
+                    /*let subStringRange: Range<String.Index> = prefix.startIndex.advancedBy(UserFilesPrivateDirectoryName.characters.count + userId.characters.count + 1)..<prefix.endIndex.advancedBy(-1)*/
+                    self.pathLabel.text = "\(userId))"
                 }
             } else {
                 self.pathLabel.text = "/"
@@ -95,7 +95,7 @@ class UserFilesViewController: UITableViewController {
         case 1: //Private Directory
             if (AWSIdentityManager.defaultIdentityManager().loggedIn) {
                 manager = AWSUserFileManager.defaultUserFileManager()
-                let userId = AWSIdentityManager.defaultIdentityManager().identityId!
+                let userId = AWSIdentityManager.defaultIdentityManager().userName!
                 prefix = "\(UserFilesPrivateDirectoryName)/\(userId)/"
             } else {
                 sender.selectedSegmentIndex = 0
@@ -644,7 +644,7 @@ class UserFilesUploadCell: UITableViewCell {
     var localContent: AWSLocalContent! {
         didSet {
             var displayFilename: String = localContent.key
-            displayFilename = displayFilename.stringByReplacingOccurrencesOfString(AWSIdentityManager.defaultIdentityManager().identityId!, withString: "<private>")
+            displayFilename = displayFilename.stringByReplacingOccurrencesOfString(AWSIdentityManager.defaultIdentityManager().userName!, withString: "<private>")
             fileNameLabel.text = displayFilename
             progressView.progress = Float(localContent.progress.fractionCompleted)
         }
