@@ -227,6 +227,13 @@
 			name = Practices;
 			sourceTree = "<group>";
 		};
+		4821E7DB1DCCE5CF00D2EE5D /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
 		B401C97902F51D2700000000 /* AmazonAws */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +277,7 @@
 		B401C9795BDD89CB00000000 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4821E7DB1DCCE5CF00D2EE5D /* About */,
 				0953D9581DC6D98F00D93BCA /* Practices */,
 				0909B5A71DAC357C001183D9 /* Welcome */,
 				B401C979E7BF05DB00000000 /* AppAnalytics */,

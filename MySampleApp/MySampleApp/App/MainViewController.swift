@@ -62,6 +62,8 @@ class MainViewController: UITableViewController {
         
         demoFeatures.append(demoFeature)
         
+        //App analytic that could be use in the future
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("App Analytics",
                 comment: "Label for demo menu option."),
@@ -69,7 +71,7 @@ class MainViewController: UITableViewController {
             comment: "Description for demo menu option."),
             icon: "AppAnalyticsIcon", storyboard: "AppAnalytics")
         
-        demoFeatures.append(demoFeature)
+        demoFeatures.append(demoFeature)*/
         
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Dynamodb",
