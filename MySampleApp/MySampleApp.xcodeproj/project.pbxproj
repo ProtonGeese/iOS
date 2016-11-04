@@ -11,6 +11,8 @@
 		0953D95A1DC6D99D00D93BCA /* Practices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0953D9591DC6D99D00D93BCA /* Practices.storyboard */; };
 		0953D95E1DC6E43000D93BCA /* PracticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953D95D1DC6E43000D93BCA /* PracticesViewController.swift */; };
 		0953D9601DC6EBDC00D93BCA /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953D95F1DC6EBDC00D93BCA /* Lesson.swift */; };
+		4821E7DD1DCCE76000D2EE5D /* AboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4821E7DC1DCCE75F00D2EE5D /* AboutController.swift */; };
+		4821E7DF1DCCE79E00D2EE5D /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4821E7DE1DCCE79E00D2EE5D /* About.storyboard */; };
 		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
 		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
 		D91D3A841DC307E30023E90C /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D91D3A831DC307E30023E90C /* AWSCognitoIdentityProvider.framework */; };
@@ -164,6 +166,8 @@
 		1DD70E29F7C3679F00000000 /* NoSQLDatabase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = NoSQLDatabase.storyboard; path = MySampleApp/Demo/NoSQL/NoSQLDatabase.storyboard; sourceTree = SOURCE_ROOT; };
 		1DD70E29FBBEC07A00000000 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = MySampleApp/App/SignIn/SignInViewController.swift; sourceTree = SOURCE_ROOT; };
 		1DD70E29FE47861100000000 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4821E7DC1DCCE75F00D2EE5D /* AboutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutController.swift; sourceTree = SOURCE_ROOT; };
+		4821E7DE1DCCE79E00D2EE5D /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = SOURCE_ROOT; };
 		483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OsuHondaAEPLogo 2.png"; path = "mysampleapp/app/supportingfiles/OsuHondaAEPLogo 2.png"; sourceTree = SOURCE_ROOT; };
 		483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OsuHondaAEPLogo.png; path = mysampleapp/app/supportingfiles/OsuHondaAEPLogo.png; sourceTree = SOURCE_ROOT; };
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
@@ -230,6 +234,8 @@
 		4821E7DB1DCCE5CF00D2EE5D /* About */ = {
 			isa = PBXGroup;
 			children = (
+				4821E7DC1DCCE75F00D2EE5D /* AboutController.swift */,
+				4821E7DE1DCCE79E00D2EE5D /* About.storyboard */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 				E7A30F04C298525200000000 /* AppAnalytics.storyboard in Resources */,
 				E7A30F0492800CC600000000 /* UserSettings.storyboard in Resources */,
 				E7A30F04751DAC2F00000000 /* UserProfile.storyboard in Resources */,
+				4821E7DF1DCCE79E00D2EE5D /* About.storyboard in Resources */,
 				E7A30F04B4D5D7AB00000000 /* NoSQLDatabase.storyboard in Resources */,
 				D931F8311DAC48EE003DFD9B /* Settings.storyboard in Resources */,
 				E7A30F0484FE9EB900000000 /* ContentDelivery.storyboard in Resources */,
@@ -608,6 +615,7 @@
 				E7A30F0460E7BFE800000000 /* MainViewController.swift in Sources */,
 				0909B5AD1DAC3737001183D9 /* SettingsViewController.swift in Sources */,
 				0953D9601DC6EBDC00D93BCA /* Lesson.swift in Sources */,
+				4821E7DD1DCCE76000D2EE5D /* AboutController.swift in Sources */,
 				E7A30F0434B6C57800000000 /* AppAnalyticsViewController.swift in Sources */,
 				E7A30F0475292BE500000000 /* NoSQLQueryResultViewController.swift in Sources */,
 				E7A30F04EC708F4700000000 /* SignInViewController.swift in Sources */,

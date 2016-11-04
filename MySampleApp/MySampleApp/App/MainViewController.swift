@@ -54,9 +54,9 @@ class MainViewController: UITableViewController {
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Dropbox",
+            name: NSLocalizedString("User Files",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Save user files in the cloud and sync user data in key/value pairs.",
+            detail: NSLocalizedString("Users files in the system.",
             comment: "Description for demo menu option."),
             icon: "UserFilesIcon", storyboard: "UserFiles")
         
@@ -71,8 +71,11 @@ class MainViewController: UITableViewController {
             comment: "Description for demo menu option."),
             icon: "AppAnalyticsIcon", storyboard: "AppAnalytics")
         
-        demoFeatures.append(demoFeature)*/
+        demoFeatures.append(demoFeature)
+         */
         
+        //Dynamo Db database could be use in the future
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Dynamodb",
                 comment: "Label for demo menu option."),
@@ -81,6 +84,7 @@ class MainViewController: UITableViewController {
             icon: "NoSQLIcon", storyboard: "NoSQLDatabase")
         
         demoFeatures.append(demoFeature)
+         */
         
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Practices",
@@ -88,6 +92,16 @@ class MainViewController: UITableViewController {
             detail: NSLocalizedString("practice the lessons",
                 comment: "Description for demo menu option."),
             icon: "IconFolder", storyboard: "Practices")
+        
+        
+        demoFeatures.append(demoFeature)
+        
+        demoFeature = DemoFeature.init(
+            name: NSLocalizedString("About",
+                comment: "Label for demo menu option."),
+            detail: NSLocalizedString("Additional information about the App.",
+                comment: "Description for demo menu option."),
+            icon: "IconFolder", storyboard: "About")
         
         
         demoFeatures.append(demoFeature)
