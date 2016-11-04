@@ -95,7 +95,12 @@ class SignInViewController: UIViewController {
     
     //var passwordAuthenticationCompletion: AWSTaskCompletionSource = AWSTaskCompletionSource.init()
     @IBAction func handleCustomLogin(sender: UIButton) {
-        
+        if(self.customEmailAddressField.text == ""){
+            self.displayError("", info: "Please enter email address!")
+        }
+        else if(self.customPasswordField.text == ""){
+            self.displayError("", info: "Please enter password!")
+        }
         if (customEmailAddressField.text != "") && (customPasswordField.text != "") {
             
             let customSignInProvider = AWSCUPIdPSignInProvider.sharedInstance
