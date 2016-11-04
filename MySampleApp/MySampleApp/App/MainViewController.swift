@@ -36,7 +36,7 @@ class MainViewController: UITableViewController {
             presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
-            name: NSLocalizedString("User Profile",
+            name: NSLocalizedString("Students Profile",
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Retrieve user profile.",
                 comment: "Description for demo menu option."),
@@ -44,6 +44,7 @@ class MainViewController: UITableViewController {
         
         demoFeatures.append(demoFeature)
         
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Lessons",
                 comment: "Label for demo menu option."),
@@ -51,8 +52,9 @@ class MainViewController: UITableViewController {
                 comment: "Description for demo menu option."),
             icon: "ContentDeliveryIcon", storyboard: "ContentDelivery")
         
-        demoFeatures.append(demoFeature)
+        demoFeatures.append(demoFeature)*/
         
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("User Files",
                 comment: "Label for demo menu option."),
@@ -60,7 +62,7 @@ class MainViewController: UITableViewController {
             comment: "Description for demo menu option."),
             icon: "UserFilesIcon", storyboard: "UserFiles")
         
-        demoFeatures.append(demoFeature)
+        demoFeatures.append(demoFeature)*/
         
         //App analytic that could be use in the future
         /*
@@ -91,7 +93,7 @@ class MainViewController: UITableViewController {
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("practice the lessons",
                 comment: "Description for demo menu option."),
-            icon: "IconFolder", storyboard: "Practices")
+            icon: "ContentDeliveryIcon", storyboard: "Practices")
         
         
         demoFeatures.append(demoFeature)
@@ -101,11 +103,12 @@ class MainViewController: UITableViewController {
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Additional information about the App.",
                 comment: "Description for demo menu option."),
-            icon: "IconFolder", storyboard: "About")
+            icon: "About", storyboard: "About")
         
         
         demoFeatures.append(demoFeature)
         
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Recording",
                 comment: "Label for demo menu option."),
@@ -114,7 +117,7 @@ class MainViewController: UITableViewController {
             icon: "IconFolder", storyboard: "Record")
         
         
-        demoFeatures.append(demoFeature)
+        demoFeatures.append(demoFeature)*/
 
                 signInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.defaultIdentityManager(), queue: NSOperationQueue.mainQueue(), usingBlock: {[weak self] (note: NSNotification) -> Void in
                         guard let strongSelf = self else { return }

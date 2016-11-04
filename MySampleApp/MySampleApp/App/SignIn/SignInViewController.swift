@@ -16,7 +16,7 @@ import UIKit
 import AWSMobileHubHelper
 import AWSCognitoIdentityProvider
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var anchorView: UIView!
 
     @IBOutlet weak var customProviderButton: UIButton!
@@ -45,6 +45,10 @@ class SignInViewController: UIViewController {
                 usingBlock: {(note: NSNotification) -> Void in
                     // perform successful login actions here
             })
+        
+        //Keyboard return
+        self.customEmailAddressField.delegate = self;
+        self.customPasswordField.delegate = self;
         
     }
     
@@ -167,6 +171,11 @@ class SignInViewController: UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func anchorViewForFacebook() -> UIView {
             return orSignInWithLabel
     }
