@@ -105,6 +105,16 @@ class MainViewController: UITableViewController {
         
         
         demoFeatures.append(demoFeature)
+        
+        demoFeature = DemoFeature.init(
+            name: NSLocalizedString("Recording",
+                comment: "Label for demo menu option."),
+            detail: NSLocalizedString("Recording function.",
+                comment: "Description for demo menu option."),
+            icon: "IconFolder", storyboard: "Record")
+        
+        
+        demoFeatures.append(demoFeature)
 
                 signInObserver = NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification, object: AWSIdentityManager.defaultIdentityManager(), queue: NSOperationQueue.mainQueue(), usingBlock: {[weak self] (note: NSNotification) -> Void in
                         guard let strongSelf = self else { return }

@@ -47,15 +47,6 @@
 		<dict>
 			<key>Default</key>
 			<dict>
-				<key>SignInProviderKeyDictionary</key>
-				<dict>
-					<key>AWSCUPIdPSignInProvider</key>
-					<string>Cognito Pool</string>
-					<key>AWSFacebookSignInProvider</key>
-					<string>Facebook</string>
-					<key>AWSGoogleSignInProvider</key>
-					<string>Google</string>
-				</dict>
 				<key>CognitoYourUserPools</key>
 				<dict>
 					<key>COGNITO_REGIONTYPE</key>
@@ -75,6 +66,15 @@
 				<dict>
 					<key>ClientId</key>
 					<string>507696508758-cmf5du0htmcap2jkeibfqi96mla857ii.apps.googleusercontent.com</string>
+				</dict>
+				<key>SignInProviderKeyDictionary</key>
+				<dict>
+					<key>AWSCUPIdPSignInProvider</key>
+					<string>Cognito Pool</string>
+					<key>AWSFacebookSignInProvider</key>
+					<string>Facebook</string>
+					<key>AWSGoogleSignInProvider</key>
+					<string>Google</string>
 				</dict>
 			</dict>
 		</dict>
@@ -195,6 +195,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>to take photos and video</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>to record Live Photos and movies</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires access to the photo library.</string>
 	<key>UILaunchStoryboardName</key>
