@@ -26,11 +26,46 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIz-o3-Pnm">
-                                <rect key="frame" x="151" y="473" width="72" height="10"/>
+                                <rect key="frame" x="137" y="388" width="101" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Video"/>
+                                <state key="normal" title="Conversation 1"/>
                                 <connections>
-                                    <action selector="playVideo2:" destination="gZa-gz-AcA" eventType="touchUpInside" id="Yz0-mJ-44Q"/>
+                                    <action selector="playVideo1:" destination="gZa-gz-AcA" eventType="touchUpInside" id="v4x-tu-fDm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXL-N9-TVJ">
+                                <rect key="frame" x="16" y="350" width="146" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sample Conversation"/>
+                                <connections>
+                                    <action selector="sampleVideo:" destination="gZa-gz-AcA" eventType="touchUpInside" id="daT-sa-jjw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORz-I0-bAB">
+                                <rect key="frame" x="136" y="426" width="103" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Conversation 2"/>
+                                <connections>
+                                    <action selector="playVideo1:" destination="gZa-gz-AcA" eventType="touchUpInside" id="Efn-my-ybU"/>
+                                    <action selector="playVideo2:" destination="gZa-gz-AcA" eventType="touchUpInside" id="47O-Cm-zhY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed2-My-RLu">
+                                <rect key="frame" x="136" y="464" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Conversation 3"/>
+                                <connections>
+                                    <action selector="playVideo1:" destination="gZa-gz-AcA" eventType="touchUpInside" id="CQ8-6H-nu8"/>
+                                    <action selector="playVideo3:" destination="gZa-gz-AcA" eventType="touchUpInside" id="wYN-qz-TyJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZJ-KF-X4z">
+                                <rect key="frame" x="136" y="502" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Conversation 4"/>
+                                <connections>
+                                    <action selector="playVideo1:" destination="gZa-gz-AcA" eventType="touchUpInside" id="AED-nP-fuu"/>
+                                    <action selector="playVideo4:" destination="gZa-gz-AcA" eventType="touchUpInside" id="eVF-CH-hQl"/>
                                 </connections>
                             </button>
                         </subviews>
