@@ -16,6 +16,8 @@
 		4821E7DF1DCCE79E00D2EE5D /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4821E7DE1DCCE79E00D2EE5D /* About.storyboard */; };
 		483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */; };
 		483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */; };
+		486460661DD2DB8100238AE9 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486460651DD2DB8100238AE9 /* VideoViewController.swift */; };
+		486460681DD2E0FE00238AE9 /* VideoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486460671DD2E0FE00238AE9 /* VideoView.storyboard */; };
 		D30D10621DCCFFC30063EC39 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30D105B1DCCFFC30063EC39 /* Camera.storyboard */; };
 		D30D10631DCCFFC30063EC39 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D105C1DCCFFC30063EC39 /* CameraView.swift */; };
 		D30D10641DCCFFC30063EC39 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30D105D1DCCFFC30063EC39 /* Player.storyboard */; };
@@ -179,6 +181,8 @@
 		4821E7DE1DCCE79E00D2EE5D /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = SOURCE_ROOT; };
 		483FE32D1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "OsuHondaAEPLogo 2.png"; path = "mysampleapp/app/supportingfiles/OsuHondaAEPLogo 2.png"; sourceTree = SOURCE_ROOT; };
 		483FE32E1DA6169C001A1B7A /* OsuHondaAEPLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OsuHondaAEPLogo.png; path = mysampleapp/app/supportingfiles/OsuHondaAEPLogo.png; sourceTree = SOURCE_ROOT; };
+		486460651DD2DB8100238AE9 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = SOURCE_ROOT; };
+		486460671DD2E0FE00238AE9 /* VideoView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VideoView.storyboard; sourceTree = SOURCE_ROOT; };
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
 		A1D2D1DD6E01DB7AB1FEA369 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A22983CB25098B386ED9C895 /* Pods_MySampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,6 +253,8 @@
 				0953D9591DC6D99D00D93BCA /* Practices.storyboard */,
 				0953D95D1DC6E43000D93BCA /* PracticesViewController.swift */,
 				0953D95F1DC6EBDC00D93BCA /* Lesson.swift */,
+				486460671DD2E0FE00238AE9 /* VideoView.storyboard */,
+				486460651DD2DB8100238AE9 /* VideoViewController.swift */,
 			);
 			name = Practices;
 			sourceTree = "<group>";
@@ -559,7 +565,7 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					E66DC04E0000000000000000 = {
-						DevelopmentTeam = KAU9RMDDR6;
+						DevelopmentTeam = H7A9792ZT3;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -608,6 +614,7 @@
 				483FE3301DA6169C001A1B7A /* OsuHondaAEPLogo.png in Resources */,
 				E7A30F0497DCFE6400000000 /* Images.xcassets in Resources */,
 				E7A30F0461E16E7200000000 /* UserFiles.storyboard in Resources */,
+				486460681DD2E0FE00238AE9 /* VideoView.storyboard in Resources */,
 				E7A30F0486D5954B00000000 /* GoogleSignIn.bundle in Resources */,
 				483FE32F1DA6169C001A1B7A /* OsuHondaAEPLogo 2.png in Resources */,
 				E7A30F04EF91249200000000 /* Main.storyboard in Resources */,
@@ -713,6 +720,7 @@
 				D30D10681DCCFFC30063EC39 /* ViewController.swift in Sources */,
 				E7A30F041B36786A00000000 /* NoSQLSampleDataGenerator.swift in Sources */,
 				D30D10631DCCFFC30063EC39 /* CameraView.swift in Sources */,
+				486460661DD2DB8100238AE9 /* VideoViewController.swift in Sources */,
 				D9F3B8FC1DC3979F00669CC7 /* AWSCUPIdPSignInProvider.swift in Sources */,
 				E7A30F04CE80434C00000000 /* UtilityFunctions.swift in Sources */,
 				E7A30F04EF0DE5EB00000000 /* NoSQLTableViewController.swift in Sources */,
@@ -788,7 +796,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = KAU9RMDDR6;
+				DEVELOPMENT_TEAM = H7A9792ZT3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -801,7 +809,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shaoguang.AEP-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chua.AEP-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -869,7 +877,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = KAU9RMDDR6;
+				DEVELOPMENT_TEAM = H7A9792ZT3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,7 +890,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.shaoguang.AEP-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chua.AEP-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";

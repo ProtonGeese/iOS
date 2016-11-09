@@ -68,10 +68,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserFilesCell" rowHeight="80" id="E6e-lP-M8Y" customClass="UserFilesCell" customModule="MySampleApp">
-                                <rect key="frame" x="0.0" y="112" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="176" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E6e-lP-M8Y" id="F9N-BS-Z5y">
-                                    <frame key="frameInset" width="375" height="79"/>
+                                    <frame key="frameInset" width="375" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5rv-o3-wax">
@@ -200,10 +200,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserFilesUploadCell" rowHeight="40" id="JBI-Vz-ZA8" customClass="UserFilesUploadCell" customModule="MySampleApp">
-                                <rect key="frame" x="0.0" y="192" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="256" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JBI-Vz-ZA8" id="L2m-fO-vZQ">
-                                    <frame key="frameInset" width="375" height="39"/>
+                                    <frame key="frameInset" width="375" height="39.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="o7d-pL-Oym">
@@ -262,6 +262,8 @@
                             <outlet property="delegate" destination="VLa-cD-v27" id="RZw-Nf-r5o"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pathLabel" destination="cHu-OO-hUa" id="G2U-rB-x8f"/>
                     </connections>

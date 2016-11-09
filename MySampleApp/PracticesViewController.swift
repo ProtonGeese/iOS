@@ -28,22 +28,16 @@ class PracticesViewController: UITableViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
         
         // You need to call `- updateTheme` here in case the sign-in happens before `- viewWillAppear:` is called.
-        updateTheme()
-        willEnterForegroundObserver = NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationWillEnterForegroundNotification, object: nil, queue: NSOperationQueue.currentQueue()) { _ in
-            self.updateTheme()
-        }
-        
-        presentSignInViewController()
-        
+
         var demoFeature = DemoFeature.init(
             name: NSLocalizedString("Lesson 1",
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("Greetings",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "UserProfile")
+            icon: "IconLessons", storyboard: "VideoView")
         
         demoFeatures.append(demoFeature)
-        
+        /*
         demoFeature = DemoFeature.init(
             name: NSLocalizedString("Lesson 2",
                 comment: "Label for demo menu option."),
@@ -88,7 +82,7 @@ class PracticesViewController: UITableViewController {
             icon: "IconLessons", storyboard: "Practices")
         
         
-        demoFeatures.append(demoFeature)
+        demoFeatures.append(demoFeature)*/
         
     }
     
@@ -99,14 +93,6 @@ class PracticesViewController: UITableViewController {
     }
     
 
-    
-    func presentSignInViewController() {
-        if !AWSIdentityManager.defaultIdentityManager().loggedIn {
-            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-            let signInViewController = storyboard.instantiateViewControllerWithIdentifier("SignIn") as! SignInViewController
-            presentViewController(signInViewController, animated: true, completion: nil)
-        }
-    }
     
     // MARK: - UITableViewController delegates
     
@@ -129,24 +115,14 @@ class PracticesViewController: UITableViewController {
         let storyboard = UIStoryboard(name: demoFeature.storyboard, bundle: nil)
         let viewController = storyboard.instantiateViewControllerWithIdentifier(demoFeature.storyboard)
         self.navigationController!.pushViewController(viewController, animated: true)
+        /*
+        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("VideoViewController")
+        self.presentViewController(vc! as UIViewController, animated: true, completion: nil)
+ */
     }
     
-    func updateTheme() {
-        let settings = ColorThemeSettings.sharedInstance
-        settings.loadSettings { (themeSettings: ColorThemeSettings?, error: NSError?) -> Void in
-            guard let themeSettings = themeSettings else {
-                print("Failed to load color: \(error)")
-                return
-            }
-            dispatch_async(dispatch_get_main_queue(), {
-                let titleTextColor: UIColor = themeSettings.theme.titleTextColor.UIColorFromARGB()
-                self.navigationController!.navigationBar.barTintColor = themeSettings.theme.titleBarColor.UIColorFromARGB()
-                self.view.backgroundColor = themeSettings.theme.backgroundColor.UIColorFromARGB()
-                self.navigationController!.navigationBar.tintColor = titleTextColor
-                self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: titleTextColor]
-            })
-        }
-    }
-    
+
 }
+    
+
 

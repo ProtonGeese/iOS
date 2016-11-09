@@ -66,6 +66,36 @@ class UserFilesViewController: UITableViewController {
         
     }
     
+    private func mergeVideo(localContent: AWSLocalContent){
+        localContent.uploadWithPinOnCompletion(false, progressBlock: {[weak self](content: AWSLocalContent?, progress: NSProgress?) -> Void in
+            guard let strongSelf = self else { return }
+            dispatch_async(dispatch_get_main_queue()) {
+                // Update the upload UI if it is a new upload and the table is not yet updated
+                if(strongSelf.tableView.numberOfRowsInSection(0) == 0 || strongSelf.tableView.numberOfRowsInSection(0) < strongSelf.manager.uploadingContents.count) {
+                    strongSelf.updateUploadUI()
+                } else {
+                    for uploadContent in strongSelf.manager.uploadingContents {
+                        if uploadContent.key == content?.key {
+                            let index = strongSelf.manager.uploadingContents.indexOf(uploadContent)!
+                            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+                            strongSelf.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+                        }
+                    }
+                }
+            }
+            }, completionHandler: {[weak self](content: AWSContent?, error: NSError?) -> Void in
+                guard let strongSelf = self else { return }
+                strongSelf.updateUploadUI()
+                if let error = error {
+                    print("Failed to upload an object. \(error)")
+                    strongSelf.showSimpleAlertWithTitle("Error", message: "Failed to upload an object.", cancelButtonTitle: "OK")
+                } else {
+                    strongSelf.refreshContents()
+                }
+            })
+        updateUploadUI()
+    }
+    
     private func updateUserInterface() {
         dispatch_async(dispatch_get_main_queue()) {
             if let prefix = self.prefix {
