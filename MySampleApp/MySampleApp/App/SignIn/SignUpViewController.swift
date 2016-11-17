@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
         print("Sign In Loading.")
         self.userPool = AWSCognitoIdentityUserPool(forKey: "UserPool")
         

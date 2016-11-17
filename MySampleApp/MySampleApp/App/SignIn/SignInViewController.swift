@@ -19,7 +19,7 @@ import AWSCognitoIdentityProvider
 class SignInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var anchorView: UIView!
 
-    @IBOutlet weak var customProviderButton: UIButton!
+    @IBOutlet weak var customLogin: UIButton!
     @IBOutlet weak var customCreateAccountButton: UIButton!
     @IBOutlet weak var customForgotPasswordButton: UIButton!
     //Editing Point
@@ -37,6 +37,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        customLogin.layer.cornerRadius = 4
+
          print("Sign In Loading.")
         
             didSignInObserver =  NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification,

@@ -25,73 +25,54 @@ class PracticesViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
-        
-        // You need to call `- updateTheme` here in case the sign-in happens before `- viewWillAppear:` is called.
+       navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
 
         var demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 1",
+            name: NSLocalizedString("Level 1",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Greetings",
+            detail: NSLocalizedString("",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "VideoView")
-        
-        demoFeatures.append(demoFeature)
-        /*
-        demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 2",
-                comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Introduce yourself",
-                comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "ContentDelivery")
+            icon: "IconLessons", storyboard: "Level1")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 3",
+            name: NSLocalizedString("Level 2",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Talk about weather",
+            detail: NSLocalizedString("",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "UserFiles")
+            icon: "IconLessons", storyboard: "Level2")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 4",
+            name: NSLocalizedString("Level 3",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("How to argue with your colleuges",
+            detail: NSLocalizedString("",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "AppAnalytics")
+            icon: "IconLessons", storyboard: "Level3")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 5",
+            name: NSLocalizedString("Level 4",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("Holidays",
+            detail: NSLocalizedString("",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "NoSQLDatabase")
+            icon: "IconLessons", storyboard: "Level4")
         
         demoFeatures.append(demoFeature)
         
         demoFeature = DemoFeature.init(
-            name: NSLocalizedString("Lesson 6",
+            name: NSLocalizedString("Level 5",
                 comment: "Label for demo menu option."),
-            detail: NSLocalizedString("practice the lessons",
+            detail: NSLocalizedString("",
                 comment: "Description for demo menu option."),
-            icon: "IconLessons", storyboard: "Practices")
+            icon: "IconLessons", storyboard: "Level5")
         
-        
-        demoFeatures.append(demoFeature)*/
+        demoFeatures.append(demoFeature)
         
     }
-    
-    deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(signInObserver)
-        NSNotificationCenter.defaultCenter().removeObserver(signOutObserver)
-        NSNotificationCenter.defaultCenter().removeObserver(willEnterForegroundObserver)
-    }
-    
 
     
     // MARK: - UITableViewController delegates
