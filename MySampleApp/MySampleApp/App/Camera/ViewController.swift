@@ -5,14 +5,17 @@ import Photos
 class ViewController: UIViewController{
     
     @IBOutlet weak var cameraView: CameraView!
+    @IBOutlet weak var recordButton: UIButton!
+
     let session = AVCaptureSession()
     var videoDeviceInput: AVCaptureDeviceInput!
     let sessionQueue = dispatch_queue_create("CameraRecord", nil)
     var movieFileOutput: AVCaptureMovieFileOutput? = nil
-    @IBOutlet weak var recordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        recordButton.layer.cornerRadius = 4
+        
         cameraView.session = session
         
         switch AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo) {

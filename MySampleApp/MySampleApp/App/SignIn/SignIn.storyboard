@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -52,7 +51,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AbV-yP-xYu" kind="show" id="olE-vc-gTA"/>
+                                    <action selector="createNewProfile:" destination="zFR-uy-L27" eventType="touchUpInside" id="iIo-7B-GjA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuh-aP-yxj">
@@ -99,91 +98,9 @@
             </objects>
             <point key="canvasLocation" x="3876" y="458.32083958020991"/>
         </scene>
-        <!--Sign-Up View Controller-->
-        <scene sceneID="koI-8c-IWc">
-            <objects>
-                <viewController storyboardIdentifier="SignUp" title="Sign-Up View Controller" id="AbV-yP-xYu" customClass="SignUpViewController" customModule="MySampleApp" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JBu-Jg-WVv"/>
-                        <viewControllerLayoutGuide type="bottom" id="f0y-K5-EtK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0la-62-ZwE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EmailAddress" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dau-jO-Lck">
-                                <rect key="frame" x="20" y="72" width="339" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="dsaf">
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8LY-sq-wfz" userLabel="New Password Field">
-                                <rect key="frame" x="20" y="127" width="560" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
-                            </textField>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a3E-ME-Xyi">
-                                <rect key="frame" x="20" y="20" width="560" height="0.0"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="MLi-IA-qfu"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8b-Re-nZa">
-                                <rect key="frame" x="89" y="292" width="196" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up"/>
-                                <connections>
-                                    <action selector="handleSignUpPressed:" destination="AbV-yP-xYu" eventType="touchUpInside" id="p2o-CB-b6m"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tIx-dN-Ipb">
-                                <rect key="frame" x="22" y="184" width="335" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xI-nE-8fy">
-                                <rect key="frame" x="22" y="236" width="335" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="a3E-ME-Xyi" secondAttribute="trailing" id="gEQ-r2-zwU"/>
-                            <constraint firstItem="a3E-ME-Xyi" firstAttribute="top" secondItem="JBu-Jg-WVv" secondAttribute="bottom" id="kd8-Hc-IBt"/>
-                            <constraint firstItem="a3E-ME-Xyi" firstAttribute="leading" secondItem="0la-62-ZwE" secondAttribute="leadingMargin" id="q9H-Lk-VJu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Create New Account" id="5sK-uA-boe">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="3f3-1F-bRa"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="anchorView" destination="a3E-ME-Xyi" id="nzB-Zv-DVq"/>
-                        <outlet property="newEmailAddressField" destination="dau-jO-Lck" id="pdx-vb-cDk"/>
-                        <outlet property="newFirstNameField" destination="7xI-nE-8fy" id="Cjb-5N-qHe"/>
-                        <outlet property="newLastNameField" destination="tIx-dN-Ipb" id="Eba-Y8-YxG"/>
-                        <outlet property="newPasswordField" destination="8LY-sq-wfz" id="wxm-Zf-ZvK"/>
-                        <outlet property="signupButton" destination="m8b-Re-nZa" id="Pks-GQ-l47"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tmI-Fs-UaR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4788" y="459.22038980509751"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RlO-AI-jXe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTc-7L-gA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="sEK-pU-hLj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HhQ-qT-hI0">
@@ -199,6 +116,7 @@
                         <segue destination="zFR-uy-L27" kind="relationship" relationship="rootViewController" id="E5E-CH-geA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTc-7L-gA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2936.8000000000002" y="458.32083958020991"/>
         </scene>

@@ -8,6 +8,7 @@ class VideoViewController: UIViewController,AVAudioPlayerDelegate {
 
     @IBOutlet weak var sampleVideo: UIButton!
     @IBOutlet weak var playVideo1: UIButton!
+    @IBOutlet weak var feedback: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,12 @@ class VideoViewController: UIViewController,AVAudioPlayerDelegate {
         
 
     }
-
+    @IBAction func feedback(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "UserFiles", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("UserFiles")
+        self.navigationController!.pushViewController(viewController, animated: true)
+    }
+    
     
     func video(url:String){
         let videoURL = NSURL(string: url)

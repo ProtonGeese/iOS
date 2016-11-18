@@ -37,6 +37,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
         customLogin.layer.cornerRadius = 4
 
          print("Sign In Loading.")
@@ -64,6 +65,17 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     // MARK: - Utility Methods
 
+    @IBAction func createNewProfile(sender: UIButton) {
+       /* let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("SignUp")
+        self.navigationController!.pushViewController(viewController, animated: true)
+ */
+        
+        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SignUp") as UIViewController
+        presentViewController(vc, animated: true, completion: nil)
+        
+    }
     
     func handleLoginWithSignInProvider(signInProvider: AWSSignInProvider) {
         
@@ -180,5 +192,12 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     func anchorViewForFacebook() -> UIView {
             return orSignInWithLabel
+    }
+}
+
+class FeatureDescriptionViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "Back", style: .Plain, target: nil, action: nil)
     }
 }

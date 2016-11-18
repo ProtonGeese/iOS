@@ -24,8 +24,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2we-WQ-RjC" customClass="CameraView" customModule="MySampleApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-27-87H">
-                                        <rect key="frame" x="163" y="617" width="49" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCT-27-87H">
+                                        <rect key="frame" x="38" y="579" width="299" height="41"/>
+                                        <color key="backgroundColor" red="0.95868305682044397" green="0.96817496827411165" blue="0.96817496827411165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Record"/>
                                         <connections>
                                             <action selector="touchUpRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NgB-48-djP"/>

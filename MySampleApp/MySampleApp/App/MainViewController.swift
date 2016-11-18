@@ -222,10 +222,10 @@ class MainViewController: UITableViewController {
         }
     }
 }
-
+/*
 class FeatureDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "Back", style: .Plain, target: nil, action: nil)
     }
-}
+}*/
