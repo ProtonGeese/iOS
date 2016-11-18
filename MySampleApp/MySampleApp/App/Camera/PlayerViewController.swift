@@ -1,5 +1,8 @@
 import UIKit
 import AVFoundation
+import MediaPlayer
+import MediaPlayer
+import AVKit
 //import GoogleAPIClient
 //import GTMOAuth2
 
@@ -24,11 +27,11 @@ class PlayerViewController: UIViewController {
     let keyChainName = "CameraRecord"
     //let clientID = "449392154913-obh7qiq70kdqhuobkh6oh0l7kjh77sik.apps.googleusercontent.com"
     let clientID = ""
-  //  lazy var services:GTLServiceDrive = {
+    //  lazy var services:GTLServiceDrive = {
     //    if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(self.keyChainName, clientID: //self.clientID, clientSecret: nil) {
-            //$0.authorizer = auth
-        //}
-        //return $0
+    //$0.authorizer = auth
+    //}
+    //return $0
     //}(GTLServiceDrive())
     
     
@@ -74,8 +77,94 @@ extension PlayerViewController{
     
     func uploadRecord(){
         //_ = GTLUploadParameters(fileURL: urlFile!, MIMEType: "mov")
+        //self.dismissViewControllerAnimated(true, completion: nil)
+        countVideo.count += 1
+        if(countVideo.count == 1)
+        {
+            video2()
+        }
+        else if(countVideo.count == 2) {
+            video3()
+        }
+        else if(countVideo.count == 3) {
+            video4()
+        }
+        else if(countVideo.count == 4) {
+            video5()
+        }
+        else
+        {
+            let storyboard = UIStoryboard(name: "VideoView", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("VideoView") as UIViewController
+            presentViewController(vc, animated: true, completion: nil)
+        }
+        
     }
     
+    func video2(){
+        let videoURL = NSURL(string: "https://s3.amazonaws.com/aepios-userfiles-mobilehub-1099679197/public/Lesson1Part2.mp4")
+        let player = AVPlayer(URL: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerDidFinishPlaying:",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: playerViewController.player!.currentItem)
+    }
+    
+    func video3(){
+        let videoURL = NSURL(string: "https://s3.amazonaws.com/aepios-userfiles-mobilehub-1099679197/public/Lesson1Part3.mp4")
+        let player = AVPlayer(URL: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerDidFinishPlaying:",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: playerViewController.player!.currentItem)
+    }
+    
+    func video4(){
+        let videoURL = NSURL(string: "https://s3.amazonaws.com/aepios-userfiles-mobilehub-1099679197/public/Lesson1Part4.mp4")
+        let player = AVPlayer(URL: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerDidFinishPlaying:",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: playerViewController.player!.currentItem)
+    }
+    
+    
+    func video5(){
+        let videoURL = NSURL(string: "https://s3.amazonaws.com/aepios-userfiles-mobilehub-1099679197/public/Lesson1Part5.mp4")
+        let player = AVPlayer(URL: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.presentViewController(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerDidFinishPlaying:",
+                                                         name: AVPlayerItemDidPlayToEndTimeNotification,
+                                                         object: playerViewController.player!.currentItem)
+    }
+    
+    
+    func playerDidFinishPlaying(note:NSNotification){
+        dismissViewControllerAnimated(true, completion: nil)
+        let storyboard = UIStoryboard(name: "Record", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("Record") as UIViewController
+        presentViewController(vc, animated: true, completion: nil)
+    }
 }
 
 

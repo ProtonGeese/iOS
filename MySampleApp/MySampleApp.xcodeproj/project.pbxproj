@@ -27,6 +27,7 @@
 		487036211DDD4DDF00B9BBE5 /* Practices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4870361F1DDD4DDF00B9BBE5 /* Practices.storyboard */; };
 		487036221DDD4DDF00B9BBE5 /* PracticesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487036201DDD4DDF00B9BBE5 /* PracticesViewController.swift */; };
 		48A271CE1DDF5FBA00523BD9 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A271CD1DDF5FBA00523BD9 /* SignUp.storyboard */; };
+		48E83F061DDF74BD00A0FF7D /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E83F051DDF74BD00A0FF7D /* Global.swift */; };
 		D30D10621DCCFFC30063EC39 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30D105B1DCCFFC30063EC39 /* Camera.storyboard */; };
 		D30D10631DCCFFC30063EC39 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30D105C1DCCFFC30063EC39 /* CameraView.swift */; };
 		D30D10641DCCFFC30063EC39 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30D105D1DCCFFC30063EC39 /* Player.storyboard */; };
@@ -202,6 +203,7 @@
 		487036201DDD4DDF00B9BBE5 /* PracticesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PracticesViewController.swift; path = MySampleApp/Demo/Practices/PracticesViewController.swift; sourceTree = SOURCE_ROOT; };
 		48A271CD1DDF5FBA00523BD9 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUp.storyboard; path = mysampleapp/app/signin/SignUp.storyboard; sourceTree = SOURCE_ROOT; };
 		48BA8C731DA5F2BD0019CF0F /* MySampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = MySampleApp.entitlements; path = MySampleApp/MySampleApp.entitlements; sourceTree = SOURCE_ROOT; };
+		48E83F051DDF74BD00A0FF7D /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Global.swift; path = MySampleApp/App/Utility/Global.swift; sourceTree = SOURCE_ROOT; };
 		A1D2D1DD6E01DB7AB1FEA369 /* Pods-MySampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MySampleApp/Pods-MySampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		A22983CB25098B386ED9C895 /* Pods_MySampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30D105B1DCCFFC30063EC39 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Camera.storyboard; path = MySampleApp/App/Camera/Camera.storyboard; sourceTree = SOURCE_ROOT; };
@@ -337,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				1DD70E29A54E217400000000 /* UtilityFunctions.swift */,
+				48E83F051DDF74BD00A0FF7D /* Global.swift */,
 			);
 			name = Utility;
 			path = mysampleapp/app/utility;
@@ -755,6 +758,7 @@
 				E7A30F0404E8BE0700000000 /* AEPStudentsTable.swift in Sources */,
 				E7A30F047339E55800000000 /* UserFilesViewController.swift in Sources */,
 				D30D10651DCCFFC30063EC39 /* PlayerView.swift in Sources */,
+				48E83F061DDF74BD00A0FF7D /* Global.swift in Sources */,
 				D92C27AA1DC147F600185388 /* UserProfileDB.swift in Sources */,
 				D30D10661DCCFFC30063EC39 /* PlayerViewController.swift in Sources */,
 				E7A30F04C9EBBD7400000000 /* NoSQLTableListViewController.swift in Sources */,
