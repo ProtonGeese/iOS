@@ -93,7 +93,7 @@ class MainViewController: UITableViewController {
                 comment: "Label for demo menu option."),
             detail: NSLocalizedString("practice the lessons",
                 comment: "Description for demo menu option."),
-            icon: "ContentDeliveryIcon", storyboard: "Practices")
+            icon: "SpeechBubble", storyboard: "Practices")
         
         
         demoFeatures.append(demoFeature)
