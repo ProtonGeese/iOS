@@ -3,6 +3,7 @@ import AVFoundation
 import MediaPlayer
 import MediaPlayer
 import AVKit
+import AWSS3
 //import GoogleAPIClient
 //import GTMOAuth2
 
@@ -36,6 +37,7 @@ class PlayerViewController: UIViewController {
     
     
     var urlFile:NSURL?
+    var username:String = "student1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +80,45 @@ extension PlayerViewController{
     func uploadRecord(){
         //_ = GTLUploadParameters(fileURL: urlFile!, MIMEType: "mov")
         //self.dismissViewControllerAnimated(true, completion: nil)
+        
+        //===================Upload Start======================
+        print("Upload video method called.")
+        // setup variables for s3 upload request
+        let s3bucket = "osuhondaaep"
+        let fileType = "mov"
+        
+        //prepare upload request
+        print("preparing upload request...")
+        let uploadRequest = AWSS3TransferManagerUploadRequest()
+        uploadRequest.bucket = s3bucket
+        uploadRequest.key = "\(username)/\(username)L1U1C\(Int(NSDate().timeIntervalSince1970)).mov"
+        uploadRequest.body = urlFile!
+        uploadRequest.uploadProgress = { (bytesSent:Int64, totalBytesSent:Int64,  totalBytesExpectedToSend:Int64) -> Void in
+            dispatch_sync(dispatch_get_main_queue(), {() -> Void in
+                print("SENT: \(bytesSent)\tTOTAL: \(totalBytesSent)\t/\(totalBytesExpectedToSend)")
+            })
+        }
+        uploadRequest.contentType = "video/" + fileType
+        print("upload request preparation complete.")
+        AWSS3TransferManager.defaultS3TransferManager().upload(uploadRequest).continueWithBlock{ (task) -> AnyObject! in
+            if let error = task.error{
+                print("Upload failed (\(error)")
+            }
+            if let exception = task.exception{
+                print("Upload failed (\(exception)")
+            }
+            if task.result != nil {
+                let s3URL = NSURL(string: "http://s3.amazonaws.com/\(s3bucket)/\(uploadRequest.key!)")!
+                print("Uploaded to: \n\(s3URL)")
+            } else {
+                print("***AWS S3 UPLOAD FAILED.")
+            }
+            
+            return nil
+        }
+        //====================Upload End========================
+        
+        
         countVideo.count += 1
         if(countVideo.count == 1)
         {
