@@ -4,8 +4,8 @@ import MediaPlayer
 import MediaPlayer
 import AVKit
 import AWSS3
-//import GoogleAPIClient
-//import GTMOAuth2
+import GoogleAPIClient
+import GTMOAuth2
 
 class PlayerViewController: UIViewController {
     
@@ -25,18 +25,9 @@ class PlayerViewController: UIViewController {
     private var playerLayer: AVPlayerLayer? {
         return playerView.playerLayer
     }
-    let keyChainName = "CameraRecord"
-    //let clientID = "449392154913-obh7qiq70kdqhuobkh6oh0l7kjh77sik.apps.googleusercontent.com"
-    let clientID = ""
-    //  lazy var services:GTLServiceDrive = {
-    //    if let auth = GTMOAuth2ViewControllerTouch.authForGoogleFromKeychainForName(self.keyChainName, clientID: //self.clientID, clientSecret: nil) {
-    //$0.authorizer = auth
-    //}
-    //return $0
-    //}(GTLServiceDrive())
-    
     
     var urlFile:NSURL?
+    var uploadUrl:NSURL?
     var username:String = "student1"
     
     override func viewDidLoad() {
@@ -44,7 +35,13 @@ class PlayerViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        asset = AVURLAsset(URL: urlFile!, options: nil)
+        let videoData = NSData(contentsOfURL: urlFile!)
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let documentsDirectory: AnyObject = paths[0]
+        let dataPath = documentsDirectory.stringByAppendingPathComponent("vid1.mov")
+        videoData?.writeToFile(dataPath, atomically: true)
+        uploadUrl = NSURL(fileURLWithPath: dataPath as String)
+        asset = AVURLAsset(URL: uploadUrl!, options: nil)
         playerView.playerLayer.player = player // should be this other
     }
     
@@ -78,9 +75,8 @@ extension PlayerViewController{
     }
     
     func uploadRecord(){
-        //_ = GTLUploadParameters(fileURL: urlFile!, MIMEType: "mov")
-        //self.dismissViewControllerAnimated(true, completion: nil)
         
+        countVideo.count += 1
         //===================Upload Start======================
         print("Upload video method called.")
         // setup variables for s3 upload request
@@ -91,8 +87,25 @@ extension PlayerViewController{
         print("preparing upload request...")
         let uploadRequest = AWSS3TransferManagerUploadRequest()
         uploadRequest.bucket = s3bucket
-        uploadRequest.key = "\(username)/\(username)L1U1C\(Int(NSDate().timeIntervalSince1970)).mov"
-        uploadRequest.body = urlFile!
+        
+        if(countVideo.count == 1)
+        {
+            uploadRequest.key = "\(username)/\("Lesson1")/1.mov"
+        }
+        else if(countVideo.count == 2) {
+            uploadRequest.key = "\(username)/\("Lesson1")/2.mov"
+        }
+        else if(countVideo.count == 3) {
+            uploadRequest.key = "\(username)/\("Lesson1")/3.mov"
+        }
+        else if(countVideo.count == 4) {
+            uploadRequest.key = "\(username)/\("Lesson1")/4.mov"
+        }
+        else
+        {
+            uploadRequest.key = "\(username)/\("Lesson1")/5.mov"
+        }
+        uploadRequest.body = uploadUrl
         uploadRequest.uploadProgress = { (bytesSent:Int64, totalBytesSent:Int64,  totalBytesExpectedToSend:Int64) -> Void in
             dispatch_sync(dispatch_get_main_queue(), {() -> Void in
                 print("SENT: \(bytesSent)\tTOTAL: \(totalBytesSent)\t/\(totalBytesExpectedToSend)")
@@ -118,8 +131,6 @@ extension PlayerViewController{
         }
         //====================Upload End========================
         
-        
-        countVideo.count += 1
         if(countVideo.count == 1)
         {
             video2()
@@ -207,10 +218,6 @@ extension PlayerViewController{
         presentViewController(vc, animated: true, completion: nil)
     }
 }
-
-
-
-
 
 
 

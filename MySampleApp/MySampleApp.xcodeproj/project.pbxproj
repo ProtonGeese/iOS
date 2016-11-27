@@ -611,7 +611,7 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					E66DC04E0000000000000000 = {
-						DevelopmentTeam = H7A9792ZT3;
+						DevelopmentTeam = KAU9RMDDR6;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -852,7 +852,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = H7A9792ZT3;
+				DEVELOPMENT_TEAM = KAU9RMDDR6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -865,7 +865,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chua.AEP-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shaoguang.AEP-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -933,7 +933,7 @@
 				CODE_SIGN_ENTITLEMENTS = MySampleApp/MySampleApp.entitlements;
 				CODE_SIGN_IDENTITY = "iphone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = H7A9792ZT3;
+				DEVELOPMENT_TEAM = KAU9RMDDR6;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -946,7 +946,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chua.AEP-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shaoguang.AEP-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
