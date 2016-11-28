@@ -12,7 +12,7 @@
         <!--My Sample App-->
         <scene sceneID="6hu-sx-o2S">
             <objects>
-                <tableViewController storyboardIdentifier="Level1" title="My Sample App" id="aGu-KU-Sz0" customClass="Level1Controller" customModule="MySampleApp" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="Level1Res" storyboardIdentifier="Level1" title="My Sample App" id="aGu-KU-Sz0" customClass="Level1Controller" customModule="MySampleApp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="h9F-b5-yKT">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

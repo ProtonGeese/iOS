@@ -112,7 +112,6 @@ class SignUpViewController: UIViewController {
                         if (response.userConfirmed != AWSCognitoIdentityUserStatus.Confirmed.rawValue) { // not confirmed
                             
                             self.displayError("Unconfirmed Account", info: "Confirm your account in Cognito")
-                            
                             //self.sentTo = response.codeDeliveryDetails?.destination
                             //self.performSegueWithIdentifier("confirmSignup", sender: sender)
                         } else { // user is confirmed - can it happen?
@@ -126,6 +125,11 @@ class SignUpViewController: UIViewController {
 
     }
     
+    @IBAction func backToLogin(sender: UIButton) {
+        dispatch_async(dispatch_get_main_queue(),{
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+    }
     func displayError(title: String, info:String) {
         // Handle Create Account action for custom sign-in here.
         let alertController = UIAlertController(title: NSLocalizedString(title, comment: "Label for custom sign-in dialog."), message: NSLocalizedString(info, comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
