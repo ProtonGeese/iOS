@@ -86,7 +86,7 @@ extension PlayerViewController{
         //===================Upload Start======================
         print("Upload video method called.")
         // setup variables for s3 upload request
-        let s3bucket = "osuhondaaep"
+        let s3bucket = "aepios-userfiles-mobilehub-1099679197"
         let fileType = "mp4"
         
         

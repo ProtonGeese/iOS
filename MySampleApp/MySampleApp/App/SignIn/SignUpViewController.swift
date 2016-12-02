@@ -76,8 +76,8 @@ class SignUpViewController: UIViewController {
             let firstname = AWSCognitoIdentityUserAttributeType()
             
             emailAddress.name = "email"
-            lastname.name = "custom:LastName"
-            firstname.name = "custom:FirstName"
+            lastname.name = "custom:Lastname"
+            firstname.name = "custom:Firstname"
             
             emailAddress.value = newEmailAddressField.text
             lastname.value = newLastNameField.text
