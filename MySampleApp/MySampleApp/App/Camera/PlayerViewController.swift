@@ -87,7 +87,7 @@ extension PlayerViewController{
         print("Upload video method called.")
         // setup variables for s3 upload request
         let s3bucket = "osuhondaaep"
-        let fileType = "mov"
+        let fileType = "mp4"
         
         
 
@@ -103,20 +103,20 @@ extension PlayerViewController{
         {
             //let key: String = "\(userId)/\("Lesson1")/1.mov"
             //self.uploadWithData(data, forKey: key)
-            uploadRequest.key = "\(userId)/\("Lesson1")/1.mov"
+            uploadRequest.key = "private/\(userId)/\("Lesson1")/1.mp4"
         }
         else if(countVideo.count == 2) {
-            uploadRequest.key = "\(userId)/\("Lesson1")/2.mov"
+            uploadRequest.key = "private/\(userId)/\("Lesson1")/2.mp4"
         }
         else if(countVideo.count == 3) {
-            uploadRequest.key = "\(userId)/\("Lesson1")/3.mov"
+            uploadRequest.key = "private/\(userId)/\("Lesson1")/3.mp4"
         }
         else if(countVideo.count == 4) {
-            uploadRequest.key = "\(userId)/\("Lesson1")/4.mov"
+            uploadRequest.key = "private/\(userId)/\("Lesson1")/4.mp4"
         }
         else
         {
-            uploadRequest.key = "\(userId)/\("Lesson1")/5.mov"
+            uploadRequest.key = "private/\(userId)/\("Lesson1")/5.mp4"
         }
         uploadRequest.body = uploadUrl
         uploadRequest.uploadProgress = { (bytesSent:Int64, totalBytesSent:Int64,  totalBytesExpectedToSend:Int64) -> Void in
@@ -162,9 +162,17 @@ extension PlayerViewController{
             /*let storyboard = UIStoryboard(name: "VideoView", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("VideoView") as UIViewController
             presentViewController(vc, animated: true, completion: nil)*/
+            self.dismissViewControllerAnimated(true, completion: nil)
+            /*dispatch_async(dispatch_get_main_queue(),{
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })
             dispatch_async(dispatch_get_main_queue(),{
                 self.dismissViewControllerAnimated(true, completion: nil)
             })
+            dispatch_async(dispatch_get_main_queue(),{
+                self.dismissViewControllerAnimated(true, completion: nil)
+            })*/
+
         }
         
     }
@@ -229,9 +237,13 @@ extension PlayerViewController{
     
     func playerDidFinishPlaying(note:NSNotification){
         dismissViewControllerAnimated(true, completion: nil)
-        let storyboard = UIStoryboard(name: "Record", bundle: nil)
+        /*let storyboard = UIStoryboard(name: "Record", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("Record") as UIViewController
-        presentViewController(vc, animated: true, completion: nil)
+        presentViewController(vc, animated: true, completion: nil)*/
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
     }
     
     /*

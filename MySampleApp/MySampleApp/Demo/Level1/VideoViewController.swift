@@ -34,9 +34,7 @@ class VideoViewController: UIViewController,AVAudioPlayerDelegate {
         let viewController = storyboard.instantiateViewControllerWithIdentifier("UserFiles")
         self.navigationController!.pushViewController(viewController, animated: true)
     }
-    
-    @IBAction func goBack(sender: UIButton) {
-            }
+
     
     func video(url:String){
         let videoURL = NSURL(string: url)

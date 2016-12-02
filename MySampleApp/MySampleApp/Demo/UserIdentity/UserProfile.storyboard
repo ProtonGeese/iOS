@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="9uY-3n-rL1">
-                                <frame key="frameInset" minX="225" minY="100" width="150" height="150"/>
+                                <rect key="frame" x="225" y="100" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="D0F-CF-3zN"/>
                                     <constraint firstAttribute="width" secondItem="9uY-3n-rL1" secondAttribute="height" multiplier="1:1" id="uJQ-xg-vBq"/>
@@ -34,30 +37,30 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Guest User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipd-BY-jJ5">
-                                <frame key="frameInset" minX="258" minY="271.5" width="85" height="19.5"/>
+                                <rect key="frame" x="258" y="271.5" width="85" height="19.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User's unique identifier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT5-pb-Rro">
-                                <frame key="frameInset" minX="239" minY="299" width="122" height="13.5"/>
+                                <rect key="frame" x="239" y="299" width="122" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="&lt;UNKNOWN IDENTITY&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AHP-BY-rSy">
-                                <frame key="frameInset" minX="20" minY="312.5" width="560" height="19.5"/>
+                                <rect key="frame" x="20" y="312.5" width="560" height="19.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoT-sv-9ZC">
-                                <frame key="frameInset" minX="267.5" minY="258" width="65.5" height="13.5"/>
+                                <rect key="frame" x="267.5" y="258" width="65.5" height="13.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbQ-S7-vN6">
-                                <frame key="frameInset" minX="249" width="119" height="72"/>
+                                <rect key="frame" x="249" y="0.0" width="119" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
@@ -65,7 +68,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Email Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgy-Qb-YJD">
-                                <frame key="frameInset" minX="136" minY="394" width="122" height="13.5"/>
+                                <rect key="frame" x="136" y="394" width="122" height="13.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

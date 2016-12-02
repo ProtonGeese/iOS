@@ -111,7 +111,7 @@ class SignUpViewController: UIViewController {
                         
                         if (response.userConfirmed != AWSCognitoIdentityUserStatus.Confirmed.rawValue) { // not confirmed
                             
-                            self.displayError("Unconfirmed Account", info: "Confirm your account in Cognito")
+                            self.displayError("Unverified Account", info: "Please wait for your instructor to verfiy your account.")
                             //self.sentTo = response.codeDeliveryDetails?.destination
                             //self.performSegueWithIdentifier("confirmSignup", sender: sender)
                         } else { // user is confirmed - can it happen?
