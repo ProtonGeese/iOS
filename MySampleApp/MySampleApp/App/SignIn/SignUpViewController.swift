@@ -2,7 +2,7 @@
 //  SignUpViewController.swift
 //  MySampleApp
 //
-//  Created by xuxiak on 2016/10/28.
+//  Created by Xiakan Xu on 2016/10/28.
 //
 //
 
@@ -60,6 +60,16 @@ class SignUpViewController: UIViewController {
         if(newEmailAddressField.text == ""){
             self.displayError("", info: "Please enter your email address!")
         }
+        else if(!validEmailAddress(newEmailAddressField.text!)){
+            self.displayError("Sorry!", info: "Only Honda Email Address is acceptable. Please contact your instructor for more infomation.")
+            
+            //  TODO for future group.
+            /*  This feature is hard coded at this time.
+                However, sponsors wish to manage valid email address manually on the webside.
+                So please move this feature to the server side and add another feature, 
+                which allowed instructors to decide what kind of email address is acceptable.
+             */
+        }
         else if(newFirstNameField.text == ""){
             self.displayError("", info: "Please enter your first name in English!")
         }
@@ -67,7 +77,7 @@ class SignUpViewController: UIViewController {
             self.displayError("", info: "Please enter your last name in English!")
         }
         else if(newPasswordField.text == ""){
-            self.displayError("", info: "Please enter your name in Kanji!")
+            self.displayError("", info: "Please enter your Password")
         }
         else{
             var newAttributes = [AWSCognitoIdentityUserAttributeType]()
@@ -130,6 +140,74 @@ class SignUpViewController: UIViewController {
             self.dismissViewControllerAnimated(true, completion: nil)
         })
     }
+    
+    
+    // This feature is hard coded, but expected to be realized on the server in the future.
+    func validEmailAddress(newEmail: String)-> Bool {
+        var valid:Bool = false;
+        
+        if newEmail.lowercaseString.rangeOfString("@ham.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hna.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@htm.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hmin.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hcm.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@ega.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hsc.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@honda-aero.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hdm.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hma.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hpg.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hpe.honda.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@oh.hra.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@mx.hra.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@hm.honda.co.jp") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@ahm.honda.com") != nil {
+            valid = true;
+        }
+            // For testing purpose, gmail and buckeyemail is currently allowed.
+        else if newEmail.lowercaseString.rangeOfString("@gmail.com") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@osu.edu") != nil {
+            valid = true;
+        }
+        else if newEmail.lowercaseString.rangeOfString("@buckeyemail.osu.edu") != nil {
+            valid = true;
+        }
+
+        return valid;
+    }
+    
     func displayError(title: String, info:String) {
         // Handle Create Account action for custom sign-in here.
         let alertController = UIAlertController(title: NSLocalizedString(title, comment: "Label for custom sign-in dialog."), message: NSLocalizedString(info, comment: "Sign-in message structure for custom sign-in stub."), preferredStyle: .Alert)
