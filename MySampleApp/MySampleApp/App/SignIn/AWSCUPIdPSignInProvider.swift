@@ -119,6 +119,7 @@ class AWSCUPIdPSignInProvider: NSObject, AWSSignInProvider {
         
         AWSIdentityManager.defaultIdentityManager().logins()
         //completionHandler(nil,task.error!)
+
     }
     
     // using NSUserDefaults the SignInProvider keeps current logged in state even when device is shut down.

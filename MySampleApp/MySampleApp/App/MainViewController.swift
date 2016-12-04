@@ -25,7 +25,7 @@ class MainViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
         
         // You need to call `- updateTheme` here in case the sign-in happens before `- viewWillAppear:` is called.
         updateTheme()
@@ -133,7 +133,6 @@ class MainViewController: UITableViewController {
                         strongSelf.setupRightBarButtonItem()
                         strongSelf.updateTheme()
                 })
-                
                 setupRightBarButtonItem()
     }
     
@@ -144,6 +143,7 @@ class MainViewController: UITableViewController {
     }
 
     func setupRightBarButtonItem() {
+
             struct Static {
                 static var onceToken: dispatch_once_t = 0
             }
@@ -152,11 +152,16 @@ class MainViewController: UITableViewController {
                 let loginButton: UIBarButtonItem = UIBarButtonItem(title: nil, style: .Done, target: self, action: nil)
                 self.navigationItem.rightBarButtonItem = loginButton
             })
-            
+        
+        /*
             if (AWSIdentityManager.defaultIdentityManager().loggedIn) {
                 navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
                 navigationItem.rightBarButtonItem!.action = "handleLogout"
             }
+         */
+        navigationItem.rightBarButtonItem!.title = NSLocalizedString("Sign-Out", comment: "Label for the logout button.")
+        navigationItem.rightBarButtonItem!.action = "handleLogout"
+    
     }
     
     func presentSignInViewController() {

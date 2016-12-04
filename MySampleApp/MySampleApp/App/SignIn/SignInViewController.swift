@@ -29,6 +29,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var leftHorizontalBar: UIView!
     @IBOutlet weak var rightHorizontalBar: UIView!
     @IBOutlet weak var orSignInWithLabel: UIView!
+    var keyboardHeight:CGFloat = 0;
+    var defualtScreenHeight:CGFloat = 0;
     
     
     var didSignInObserver: AnyObject!
@@ -42,6 +44,9 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
 
          print("Sign In Loading.")
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+
+        
             didSignInObserver =  NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification,
                 object: AWSIdentityManager.defaultIdentityManager(),
                 queue: NSOperationQueue.mainQueue(),
@@ -53,10 +58,61 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         self.customEmailAddressField.delegate = self;
         self.customPasswordField.delegate = self;
         
+        customEmailAddressField.tag = 0
+        customPasswordField.tag = 1
+        
+        defualtScreenHeight = self.view.frame.origin.y;
+        
     }
     
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(didSignInObserver)
+    }
+    
+    func keyboardWillShow(notification:NSNotification) {
+        let userInfo:NSDictionary = notification.userInfo!
+        let keyboardFrame:NSValue = userInfo.valueForKey(UIKeyboardFrameEndUserInfoKey) as! NSValue
+        let keyboardRectangle = keyboardFrame.CGRectValue()
+        self.keyboardHeight = keyboardRectangle.height
+        self.view.frame.origin.y = self.defualtScreenHeight - self.keyboardHeight
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = self.defualtScreenHeight;
+    }
+    /*
+    func textFieldDidBeginEditing(textField: UITextField) {
+            self.view.frame.origin.y -= self.keyboardHeight
+            self.view.frame.size.height += self.keyboardHeight
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField){
+
+            //Finish editing username
+            self.view.frame.origin.y += self.keyboardHeight
+            self.view.frame.size.height -= self.keyboardHeight
+
+    }
+ */
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        if (textField.tag == 0){
+            // Username entered and return pressed
+            // Go to edit PasswordTextField
+            if let nextField = textField.superview?.viewWithTag(1) as? UITextField {
+                nextField.becomeFirstResponder()
+            } else {
+                print("Warning: Password Text Field Not Found!")
+                textField.resignFirstResponder()
+            }
+        }
+        else if(textField.tag == 1){
+            textField.resignFirstResponder()
+            //After the password entered, press return has the same effect as login
+            //TODO
+            //handleCustomLogin()
+            self.handleCustomLogin(nil)
+        }
+        return false
     }
     
     func dimissController() {
@@ -85,6 +141,7 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                 dispatch_async(dispatch_get_main_queue(),{
                         self.dismissViewControllerAnimated(true, completion: nil)
                 })
+                
             }
             else {
                 dispatch_async(dispatch_get_main_queue(),{
@@ -112,7 +169,10 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
     
     
     //var passwordAuthenticationCompletion: AWSTaskCompletionSource = AWSTaskCompletionSource.init()
-    @IBAction func handleCustomLogin(sender: UIButton) {
+    @IBAction func handleCustomLogin(sender: UIButton?) {
+        
+        self.view.frame.origin.y = self.defualtScreenHeight;
+        
         if(self.customEmailAddressField.text == ""){
             self.displayError("", info: "Please enter email address!")
         }
@@ -132,42 +192,6 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         }
     }
  
-    /*
-    
-    func handleCustomLogin() {
-        
-        if (customUserIdField.text == nil) {
-            self.displayError("User Name Empty")
-        }
-        else if (customPasswordField.text == nil){
-            self.displayError("Password Empty")
-
-        }
-        else {
-            let user = (UIApplication.sharedApplication().delegate as! AppDelegate).userPool!.getUser(customUserIdField.text!)
-
-            user.getSession(customUserIdField.text!, password: customPasswordField.text!, validationData: nil, scopes: nil).continueWithExecutor(AWSExecutor.mainThreadExecutor(), withBlock: {
-                (task:AWSTask!) -> AnyObject! in
-                
-                if task.error == nil {
-                    
-                    
-                    dispatch_async(dispatch_get_main_queue(),{
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    })
-                } else {
-                    self.displayError(task.error.debugDescription)
-                }
-                
-                return nil
-            })
-            
-        }
- 
-        //self.passwordAuthenticationCompletion.setResult(AWSCognitoIdentityPasswordAuthenticationDetails(username: customUserIdField.text!, password: customPasswordField.text!))
-    }
-    
-    */
     
     func displayError(title: String, info:String) {
         // Handle Create Account action for custom sign-in here.
@@ -185,10 +209,12 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
         presentViewController(alertController, animated: true, completion: nil)
     }
 
+    /*
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
+ */
     
     func anchorViewForFacebook() -> UIView {
             return orSignInWithLabel

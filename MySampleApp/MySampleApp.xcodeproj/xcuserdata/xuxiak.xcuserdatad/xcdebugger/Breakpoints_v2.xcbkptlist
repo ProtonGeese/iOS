@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/SignIn/SignInViewController.swift"
-            timestampString = "499366557.149057"
+            timestampString = "502584503.072182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "handleLoginWithSignInProvider(signInProvider:)"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "handleLoginWithSignInProvider(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/SignIn/SignInViewController.swift"
-            timestampString = "499366557.149057"
+            timestampString = "502584503.072182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "handleLoginWithSignInProvider(signInProvider:)"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "handleLoginWithSignInProvider(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MySampleApp/App/SignIn/SignInViewController.swift"
-            timestampString = "499366852.648742"
+            timestampString = "502584503.072182"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "handleLoginWithSignInProvider(signInProvider:)"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "handleLoginWithSignInProvider(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
