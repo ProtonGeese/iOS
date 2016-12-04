@@ -136,7 +136,6 @@ class AWSCUPIdPSignInProvider: NSObject, AWSSignInProvider {
                     // let response = task.result as! AWSCognitoIdentityUserSession
                     self.completeLogin()
                 }
-                
                 return nil
             }
         } else {
