@@ -159,7 +159,8 @@ class SignInViewController: UIViewController,UITextFieldDelegate {
                         self.displayError("", info: "Incorrect username or password")
                     }
                     else{
-                        self.displayError("Error", info:error.debugDescription)
+                        self.displayError("", info: "Incorrect username or password")
+                        //self.displayError("Error", info:error.debugDescription)
                     }
                     
                 })

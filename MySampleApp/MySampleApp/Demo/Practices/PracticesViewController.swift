@@ -9,7 +9,8 @@
 // copy, distribute and modify it.
 //
 // Source code generated from template: aws-my-sample-app-ios-swift v0.4
-//
+// Edited by: Kee Sern Chua
+
 
 import UIKit
 import AWSMobileHubHelper

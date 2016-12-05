@@ -32,9 +32,9 @@ class UserProfileViewController: UIViewController {
         
         
         // Editing Mode is off
-        self.setEditing(false, animated: true)
+        /*self.setEditing(false, animated: true)
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: (self.editing) ? .Done : .Edit, target: self, action: #selector(UserProfileViewController.enableEditingMode))
-        
+        */
         
         
         let identityManager = AWSIdentityManager.defaultIdentityManager()
